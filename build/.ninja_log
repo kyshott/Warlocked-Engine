@@ -1,0 +1,23 @@
+# ninja log v6
+26	1428	7639497672642345	CMakeFiles/game.dir/src/game_main.cpp.obj	40ef5f6e2fbabc
+56	1475	7639497672946873	CMakeFiles/game.dir/src/textureloader.cpp.obj	956cb6c59c41d458
+48	1520	7639497672858932	CMakeFiles/game.dir/src/template.cpp.obj	15c5ca24765b41fa
+32	1627	7639497672693675	CMakeFiles/game.dir/src/gameloop.cpp.obj	77c0b808aae8980
+40	1712	7639497672778964	CMakeFiles/game.dir/src/player.cpp.obj	a1759481977fd594
+13	1761	7639497672543298	CMakeFiles/game.dir/src/entity.cpp.obj	1d72dec669f00a26
+1761	1947	7639497689984508	game.exe	69efc2af7429d805
+55	1336	7639501973465004	CMakeFiles/game.dir/src/gameloop.cpp.obj	77c0b808aae8980
+1337	1498	7639501986293657	game.exe	69efc2af7429d805
+16	1309	7639503044477660	CMakeFiles/game.dir/src/gameloop.cpp.obj	77c0b808aae8980
+1310	1480	7639503057414171	game.exe	69efc2af7429d805
+21	1325	7639503259821466	CMakeFiles/game.dir/src/gameloop.cpp.obj	77c0b808aae8980
+1326	1509	7639503272868682	game.exe	69efc2af7429d805
+23	1244	7639504600004541	CMakeFiles/game.dir/src/gameloop.cpp.obj	77c0b808aae8980
+1245	1437	7639504612229871	game.exe	69efc2af7429d805
+25	1163	7639504783547665	CMakeFiles/game.dir/src/gameloop.cpp.obj	77c0b808aae8980
+1165	1335	7639504794945909	game.exe	69efc2af7429d805
+33	1195	7639507961226689	CMakeFiles/game.dir/src/gameloop.cpp.obj	77c0b808aae8980
+23	1631	7639507961130330	CMakeFiles/game.dir/src/game_main.cpp.obj	40ef5f6e2fbabc
+1631	1867	7639507977204951	game.exe	69efc2af7429d805
+20	1614	7639509144779473	CMakeFiles/game.dir/src/game_main.cpp.obj	40ef5f6e2fbabc
+1615	1767	7639509160715788	game.exe	69efc2af7429d805

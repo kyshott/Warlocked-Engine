@@ -1,0 +1,3 @@
+C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/game.dir
+C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/edit_cache.dir
+C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/rebuild_cache.dir
