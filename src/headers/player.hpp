@@ -5,6 +5,8 @@
 #include <vector>
 #include "entity.hpp"
 
+enum PlayerState {IDLE, MOVING, FIRING}; // For Player state machine
+
 class Player : public Entity {
 public:
 
@@ -13,6 +15,7 @@ public:
 
     Player(int x, int y, int w, int h, SDL_Renderer* renderer, std::string givenpath, bool animated) : Entity(x, y, w, h, renderer, givenpath, animated) {};
     void handleEvent(const SDL_Event& e);
+    void fireSpell(Direction dir);
 };
 
 #endif

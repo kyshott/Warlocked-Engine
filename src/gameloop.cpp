@@ -19,6 +19,10 @@ void Game::close() {
 
 //Main game loop - basically is the "tick" of the game
 void Game::gameloop() {
+
+	SCREEN_WIDTH = 1000;
+	SCREEN_HEIGHT = 1000;
+
 	initSDL();
 
 	Player player(500, 500, 48, 48, renderer, "resources/Player/Warlock.PNG", true);
@@ -32,6 +36,7 @@ void Game::gameloop() {
 	//While application is running
 	while (!quit)
 	{
+		//CRUCIAL - the ultimate delta calculation....
 
 		while (SDL_PollEvent(&e) != 0)
 		{

@@ -1,18 +1,23 @@
 #ifndef PROJECTILE_H
 #define PROJECTILE_H
 
+#include <SDL.h>
 #include "entity.hpp"
 
 class FireBall : public Entity {
 public:
-	void spawn();
+
+	// Connect particle system somehow once it is implemented
+
+	void spawn(int x, int y, SDL_Renderer* renderer, Direction dir);
 	void contact();
 
-private:
-	int spawnLocation;
+	Entity body; // Main "body" of the fireball with all inherited methods
 
-	const int WIDTH = 50;
-	const int HEIGHT = 50;
+private:
+
+	std::string texturePath = "resources/Player/Warlock.PNG";
+
 };
 
 #endif

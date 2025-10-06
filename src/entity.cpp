@@ -6,6 +6,8 @@
 //Define player rectangle starting position and width/height - update path to the sprite sheet
 Entity::Entity(int x, int y, int w, int h, SDL_Renderer* renderer, std::string givenpath, bool animated) {
 
+	contacting = false; // AABB collision
+
 	isAnimated = animated;
 	
 	spriteWidth = w;
@@ -18,7 +20,7 @@ Entity::Entity(int x, int y, int w, int h, SDL_Renderer* renderer, std::string g
 
 	path = givenpath;
 	rect = { x, y, spriteWidth, spriteHeight };
-	dir = NONE;
+	dir = DOWN;
 	initTexture(renderer);
 }
 
@@ -48,6 +50,7 @@ void Entity::update(SDL_Renderer* renderer) {
 			break;
 		}
 	}
+	//TODO: Implement delta time system to allow for sprite animation...
 	if(isAnimated) {
 		switch (dir)
 		{
@@ -63,6 +66,12 @@ void Entity::update(SDL_Renderer* renderer) {
 			break;
 		}
 	}
+}
+
+bool Entity::collider(const Entity& check) const {
+
+	return SDL_HasIntersection(&rect, &check.rect);
+	
 }
 
 

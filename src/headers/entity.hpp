@@ -23,11 +23,13 @@ public:
     SDL_Texture* texture;
 
     bool isAnimated;
+    bool contacting;
 
     Entity(int x, int y, int w, int h, SDL_Renderer* renderer, std::string givenpath, bool animated);
     void renderSprite(SDL_Renderer* renderer);
     void update(SDL_Renderer* renderer);
     void initTexture(SDL_Renderer* renderer);
+    bool collider(const Entity& check) const;
 
 };
 

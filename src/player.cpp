@@ -37,3 +37,8 @@ void Player::handleEvent(const SDL_Event& e) {
 		dir = NONE;
 	}
 }
+
+void Player::fireSpell(Direction dir) {
+
+	
+}
