@@ -4,9 +4,11 @@
 #include <filesystem>
 
 //Define player rectangle starting position and width/height - update path to the sprite sheet
-Entity::Entity(int x, int y, int w, int h, SDL_Renderer* renderer, std::string givenpath, bool animated) {
+Entity::Entity(int x, int y, int w, int h, SDL_Renderer* renderer, std::string givenpath, bool animated, float spd, Direction _dir) {
 
 	contacting = false; // AABB collision
+
+	this->speed = spd;
 
 	isAnimated = animated;
 	
@@ -19,58 +21,65 @@ Entity::Entity(int x, int y, int w, int h, SDL_Renderer* renderer, std::string g
 	srcRect.h = spriteHeight;
 
 	path = givenpath;
+
+	posX = x;
+	posY = y;
+	
 	rect = { x, y, spriteWidth, spriteHeight };
-	dir = DOWN;
+	this->dir = _dir;
 	initTexture(renderer);
 }
 
 //Update player position based on key held
-void Entity::update(SDL_Renderer* renderer) {
+void Entity::update(SDL_Renderer* renderer, float dt) {
 
-	renderSprite(renderer);
-
-	//Window boundary detection... 100% temporary in this case will be changed later
-	if (rect.x < 0) rect.x = 0;
-	if (rect.y < 0) rect.y = 0;
-	if (rect.x + 50 > 1000) rect.x = 1000 - 50;
-	if (rect.y + 50 > 1000) rect.y = 1000 - 50;
+	//std::cout << "Speed: " << speed << " dt: " << dt << " dir: " << dir << " rect.x: " << rect.x << " rect.y: " << rect.y << std::endl;
 
 	if(!isAnimated) {
-		switch (dir)
-		{
-		case DOWN:
-			rect.y += 10; spriteindex = 0; break;
-		case UP:
-			rect.y -= 10; spriteindex = 10; break;
-		case LEFT:
-			rect.x -= 10; spriteindex = 7; break;
-		case RIGHT:
-			rect.x += 10; spriteindex = 4; break;
-		case NONE:
-			break;
-		}
-	}
-	//TODO: Implement delta time system to allow for sprite animation...
-	if(isAnimated) {
-		switch (dir)
-		{
-		case DOWN:
-			rect.y += 10; spriteindex = 0; break;
-		case UP:
-			rect.y -= 10; spriteindex = 10; break;
-		case LEFT:
-			rect.x -= 10; spriteindex = 7; break;
-		case RIGHT:
-			rect.x += 10; spriteindex = 4; break;
-		case NONE:
-			break;
-		}
-	}
+        switch (dir)
+        {
+        case DOWN:
+            posY += speed * dt; spriteindex = 0; break;
+        case UP:
+            posY -= speed * dt; spriteindex = 10; break;
+        case LEFT:
+            posX -= speed * dt; spriteindex = 7; break;
+        case RIGHT:
+            posX += speed * dt; spriteindex = 4; break;
+        case NONE:
+            break;
+        }
+    }
+    if(isAnimated) {
+        switch (dir)
+        {
+        case DOWN:
+            posY += speed * dt; spriteindex = 0; break;
+        case UP:
+            posY -= speed * dt; spriteindex = 10; break;
+        case LEFT:
+            posX -= speed * dt; spriteindex = 7; break;
+        case RIGHT:
+            posX += speed * dt; spriteindex = 4; break;
+        case NONE:
+            break;
+        }
+    }
+
+	// Window border clamping - temporary until AABB is fully implemented
+	// Maybe keep as a feature? Add separate objects for transporting player to other areas? Keep as a failsafe for clipping with area walls?
+	if (posX < 0) posX = 0;
+    if (posY < 0) posY = 0;
+    if (posX + 50 > 1000) posX = 1000 - 50;
+    if (posY + 50 > 1000) posY = 1000 - 50;
+
+    rect.x = static_cast<int>(posX);
+    rect.y = static_cast<int>(posY);
+
+    renderSprite(renderer);
 }
 
-bool Entity::collider(const Entity& check) const {
-
-	return SDL_HasIntersection(&rect, &check.rect);
+bool Entity::collider(double dt, const std::vector<Entity*>& others) {
 	
 }
 

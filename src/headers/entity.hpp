@@ -15,6 +15,10 @@ public:
     int spriteHeight;
     int spriteindex;
 
+    float speed;
+    float posX;
+    float posY;
+
     SDL_Rect rect;
     SDL_Rect srcRect;
 
@@ -23,13 +27,14 @@ public:
     SDL_Texture* texture;
 
     bool isAnimated;
+
     bool contacting;
 
-    Entity(int x, int y, int w, int h, SDL_Renderer* renderer, std::string givenpath, bool animated);
+    Entity(int x, int y, int w, int h, SDL_Renderer* renderer, std::string givenpath, bool animated, float spd, Direction _dir);
     void renderSprite(SDL_Renderer* renderer);
-    void update(SDL_Renderer* renderer);
+    void update(SDL_Renderer* renderer, float dt);
     void initTexture(SDL_Renderer* renderer);
-    bool collider(const Entity& check) const;
+    bool collider(double dt, const std::vector<Entity*>& others);
 
 };
 

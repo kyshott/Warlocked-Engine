@@ -1,0 +1,14 @@
+1. Game area has updater for everything in it while it is active
+2. Iterate through all entities - call the collider for each
+3. The "current area" is selected in the game loop, and the update is ran. All entities update in this game area, and their positions within the area are saved. if they move out of the area and into another,
+they are removed from the current area vector and placed into the next. Basically, entities will only update when on screen
+
+Game areas are all managed by the game world
+
+Initmap loads in all necessary data for the area, including default entity positions, state variables, etc. Savestate saves the area upon leaving and stores entity values and positions to be loaded should
+the player go back in
+
+Everything, including entities and game areas, are to be stored in smart pointer vectors so that they can be quickly and safely loaded/removed as they are needed/not needed. As long as state variables
+are stored in an external file or class, they can pull values from these files when they are loaded back in. This way, memory leaks will (hopefully) not happen, and having to tediously free up all resources
+from each entity manually will no longer be required. Ideally, anything that is not the player should be handled this way. Player can be implemented (maybe) as a singleton.
+
