@@ -1,9 +1,10 @@
-#ifndef GAME_WORLD_H
-#define GAME_WORLD_H
+#ifndef GAME_AREA_H
+#define GAME_AREA_H
 
 #include <SDL.h>
 #include <vector>
 #include "entity.hpp"
+#include "memory"
 
 class GameArea {
 public:
@@ -12,7 +13,7 @@ public:
 
     // Use smart pointers for automatic memory management. Entities go into smart pointer vectors, areas go into smart pointer vectors, etc etc
 
-    std::vector<Entity*> entities; // Vector of all entities on the screen
+    std::vector<std::unique_ptr<Entity>> entities;
 
     const int WIDTH;
     const int HEIGHT;
@@ -20,6 +21,7 @@ public:
     // Area state
     void initMap();
     void saveState(); // Include memory freeing as part of this method
+    void loadState();
 
     // Entity management / general functionality
     void addEntity(Entity* e);

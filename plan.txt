@@ -12,3 +12,7 @@ Everything, including entities and game areas, are to be stored in smart pointer
 are stored in an external file or class, they can pull values from these files when they are loaded back in. This way, memory leaks will (hopefully) not happen, and having to tediously free up all resources
 from each entity manually will no longer be required. Ideally, anything that is not the player should be handled this way. Player can be implemented (maybe) as a singleton.
 
+Potentially, a template can be used to store all objects of an area into one smart pointer vector which can streamline the data management process even further.
+With that, should this be implemented, then all objects that could ever possibly be loaded into an area must have some sort of class that will instantiate the object
+while also maintaining previous information such as position, state, etc.
+

@@ -6,6 +6,12 @@
 
 enum Direction { NONE, UP, DOWN, LEFT, RIGHT };
 
+struct Position {
+    float x;
+    float y;
+    int layer; // For future use with multiple layers... don't know if this will ever be used, but may be useful for engine purposes and parallaxing if that ever becomes a thing
+};
+
 class Entity {
 public:
 

@@ -1,5 +1,6 @@
 #include "headers/gameloop.hpp"
 #include "headers/player.hpp"
+#include <memory>
 
 //Initialize SDL and create a window and renderer
 void Game::initSDL() {
@@ -21,6 +22,8 @@ void Game::close() {
 }
 
 void Game::initObjects() {
+
+	//std::unique_ptr<Player> player = std::make_unique<Player>(500, 500, 48, 48, renderer, "resources/Player/Warlock.PNG", true, 400.0f, DOWN); Sample smart pointer declaration
 	Player player(500, 500, 48, 48, renderer, "resources/Player/Warlock.PNG", true, 400.0f, DOWN);
 
 	Player player2(250, 250, 48, 48, renderer, "resources/Player/Warlock.PNG", true, 400.0f, DOWN);

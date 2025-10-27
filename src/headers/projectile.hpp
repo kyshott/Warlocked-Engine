@@ -9,7 +9,7 @@ public:
 
 	// Connect particle system somehow once it is implemented
 
-	void spawn(int x, int y, SDL_Renderer* renderer, Direction dir);
+	void spawn(int x, int y, SDL_Renderer* renderer, Direction dir, float speed);
 	void contact();
 
 	Entity body; // Main "body" of the fireball with all inherited methods
