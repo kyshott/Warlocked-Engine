@@ -37,7 +37,7 @@ void GameArea::areaUpdate(float dt, SDL_Renderer* renderer) {
 
     for (auto& entity : entities) {
         entity->update(renderer, dt);
-        //entity->collider(dt, entities);
+        entity->collider(dt, entities);
     }
    
 }

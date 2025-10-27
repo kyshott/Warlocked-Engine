@@ -40,7 +40,8 @@ public:
     void renderSprite(SDL_Renderer* renderer);
     void update(SDL_Renderer* renderer, float dt);
     void initTexture(SDL_Renderer* renderer);
-    bool collider(double dt, const std::vector<Entity*>& others);
+    bool collider(double dt, const std::vector<std::unique_ptr<Entity>> others);
+    void borderCollision(int levelWidth, int levelHeight, bool override);
 
 };
 

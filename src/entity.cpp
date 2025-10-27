@@ -3,7 +3,7 @@
 #include <iostream>
 #include <filesystem>
 
-//Define player rectangle starting position and width/height - update path to the sprite sheet
+// Define entity rectangle starting position and width/height, sprite path, animation state, speed and direction.
 Entity::Entity(int x, int y, int w, int h, SDL_Renderer* renderer, std::string givenpath, bool animated, float spd, Direction _dir) {
 
 	contacting = false; // AABB collision
@@ -30,7 +30,7 @@ Entity::Entity(int x, int y, int w, int h, SDL_Renderer* renderer, std::string g
 	initTexture(renderer);
 }
 
-//Update player position based on key held
+//Update player position based on key held.
 void Entity::update(SDL_Renderer* renderer, float dt) {
 
 	//std::cout << "Speed: " << speed << " dt: " << dt << " dir: " << dir << " rect.x: " << rect.x << " rect.y: " << rect.y << std::endl;
@@ -68,10 +68,7 @@ void Entity::update(SDL_Renderer* renderer, float dt) {
 
 	// Window border clamping - temporary until AABB is fully implemented
 	// Maybe keep as a feature? Add separate objects for transporting player to other areas? Keep as a failsafe for clipping with area walls?
-	if (posX < 0) posX = 0;
-    if (posY < 0) posY = 0;
-    if (posX + 50 > 1000) posX = 1000 - 50;
-    if (posY + 50 > 1000) posY = 1000 - 50;
+	borderCollision(1000, 1000, false);
 
     rect.x = static_cast<int>(posX);
     rect.y = static_cast<int>(posY);
@@ -79,10 +76,21 @@ void Entity::update(SDL_Renderer* renderer, float dt) {
     renderSprite(renderer);
 }
 
-bool Entity::collider(double dt, const std::vector<Entity*>& others) {
-	
+// AABB collision detection using area entity smart pointer vector.
+bool Entity::collider(double dt, const std::vector<std::unique_ptr<Entity>> others) {
+	// Find way to dereference unique pointer from vector so rect can be accessed
 }
 
+// Window border collision detection/clamping to avoid going out of bounds. Set override to 'true' to disable.
+void Entity::borderCollision(int levelWidth, int levelHeight, bool override) {
+	
+	if(override) return;
+	if (posX < 0) posX = 0;
+    if (posY < 0) posY = 0;
+    if (posX + 50 > levelWidth) posX = levelWidth - 50;
+    if (posY + 50 > levelHeight) posY = levelHeight - 50;
+
+}
 
 //Render / update sprite of entity based on position
 void Entity::renderSprite(SDL_Renderer* renderer) {
@@ -92,7 +100,7 @@ void Entity::renderSprite(SDL_Renderer* renderer) {
 	SDL_RenderCopy(renderer, texture, &srcRect, &rect);
 }
 
-//Initializes the texture or "sprite sheet" for the entity
+//Initializes the texture or "sprite sheet" for the entity. Recommended to use PNGs with "left to right" sprite sheet layout for easier sprite indexing.
 void Entity::initTexture(SDL_Renderer* renderer) {
 
 	std::cout << "Rendering from path: " << path << std::endl;
