@@ -64,7 +64,7 @@ void Game::gameloop() {
 			}
 			//Handle input for all controllable objects
 			for (auto& obj : controllables) {
-				obj.handleEvent(e);
+				obj.handleMoveEvent(e);
 			}
 
 		}

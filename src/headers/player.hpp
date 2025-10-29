@@ -14,7 +14,7 @@ public:
     std::vector<SDL_Scancode> keyStack;
 
     Player(int x, int y, int w, int h, SDL_Renderer* renderer, std::string givenpath, bool animated, float spd, Direction _dir) : Entity(x, y, w, h, renderer, givenpath, animated, spd, _dir) {};
-    void handleEvent(const SDL_Event& e);
+    void handleMoveEvent(const SDL_Event& e);
     void fireSpell(Direction dir);
 };
 

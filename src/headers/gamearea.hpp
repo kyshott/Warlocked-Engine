@@ -26,6 +26,7 @@ public:
     // Entity management / general functionality
     void addEntity(Entity* e);
     void areaUpdate(float dt, SDL_Renderer* renderer);
+    void layerRender(); // Render layers of the map from tilemap. Helper function
 
 };
 

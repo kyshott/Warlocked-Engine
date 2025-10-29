@@ -10,6 +10,10 @@ void GameArea::initMap() {
     // Initialize map - probably entails loading a tilemap texture or something simple since entity management is done in loadState()
 }
 
+void GameArea::layerRender() {
+    // Render layers of the map from tilemap. Helper function
+}
+
 void GameArea::saveState() {
     // Save the current state of the game area, entities, etc... to a file
 

@@ -5,7 +5,7 @@
 #include <algorithm>
 
 //Handle key events in the event queue
-void Player::handleEvent(const SDL_Event& e) {
+void Player::handleMoveEvent(const SDL_Event& e) {
 	if (e.type == SDL_KEYDOWN && e.key.repeat == 0) {
 		SDL_Scancode key = e.key.keysym.scancode;
 
