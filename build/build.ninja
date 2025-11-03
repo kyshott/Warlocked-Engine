@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: Warlocked
-# Configurations: 
+# Configurations: RelWithDebInfo
 # =============================================================================
 
 #############################################
@@ -20,6 +20,11 @@
 
 ninja_required_version = 1.5
 
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = RelWithDebInfo
 # =============================================================================
 # Include auxiliary files.
 
@@ -42,41 +47,77 @@ cmake_ninja_workdir = C$:/Users/Kyle/Documents/Warlocked-Engine/build/
 #############################################
 # Order-only phony target for game
 
-build cmake_object_order_depends_target_game: phony || .
+build cmake_object_order_depends_target_game: phony || cmake_object_order_depends_target_libzstd_static cmake_object_order_depends_target_tinytmx cmake_object_order_depends_target_tinyxml2 cmake_object_order_depends_target_zlibstatic
 
-build CMakeFiles/game.dir/src/entity.cpp.obj: CXX_COMPILER__game_unscanned_ C$:/Users/Kyle/Documents/Warlocked-Engine/src/entity.cpp || cmake_object_order_depends_target_game
+build CMakeFiles/game.dir/src/entity.cpp.obj: CXX_COMPILER__game_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/src/entity.cpp || cmake_object_order_depends_target_game
+  CONFIG = RelWithDebInfo
   DEP_FILE = CMakeFiles\game.dir\src\entity.cpp.obj.d
-  INCLUDES = -isystem C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../include
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -isystem C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../include
   OBJECT_DIR = CMakeFiles\game.dir
   OBJECT_FILE_DIR = CMakeFiles\game.dir\src
 
-build CMakeFiles/game.dir/src/game_main.cpp.obj: CXX_COMPILER__game_unscanned_ C$:/Users/Kyle/Documents/Warlocked-Engine/src/game_main.cpp || cmake_object_order_depends_target_game
+build CMakeFiles/game.dir/src/game_main.cpp.obj: CXX_COMPILER__game_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/src/game_main.cpp || cmake_object_order_depends_target_game
+  CONFIG = RelWithDebInfo
   DEP_FILE = CMakeFiles\game.dir\src\game_main.cpp.obj.d
-  INCLUDES = -isystem C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../include
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -isystem C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../include
   OBJECT_DIR = CMakeFiles\game.dir
   OBJECT_FILE_DIR = CMakeFiles\game.dir\src
 
-build CMakeFiles/game.dir/src/gameloop.cpp.obj: CXX_COMPILER__game_unscanned_ C$:/Users/Kyle/Documents/Warlocked-Engine/src/gameloop.cpp || cmake_object_order_depends_target_game
+build CMakeFiles/game.dir/src/gamearea.cpp.obj: CXX_COMPILER__game_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/src/gamearea.cpp || cmake_object_order_depends_target_game
+  CONFIG = RelWithDebInfo
+  DEP_FILE = CMakeFiles\game.dir\src\gamearea.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -isystem C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../include
+  OBJECT_DIR = CMakeFiles\game.dir
+  OBJECT_FILE_DIR = CMakeFiles\game.dir\src
+
+build CMakeFiles/game.dir/src/gameloop.cpp.obj: CXX_COMPILER__game_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/src/gameloop.cpp || cmake_object_order_depends_target_game
+  CONFIG = RelWithDebInfo
   DEP_FILE = CMakeFiles\game.dir\src\gameloop.cpp.obj.d
-  INCLUDES = -isystem C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../include
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -isystem C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../include
   OBJECT_DIR = CMakeFiles\game.dir
   OBJECT_FILE_DIR = CMakeFiles\game.dir\src
 
-build CMakeFiles/game.dir/src/player.cpp.obj: CXX_COMPILER__game_unscanned_ C$:/Users/Kyle/Documents/Warlocked-Engine/src/player.cpp || cmake_object_order_depends_target_game
+build CMakeFiles/game.dir/src/gameworld.cpp.obj: CXX_COMPILER__game_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/src/gameworld.cpp || cmake_object_order_depends_target_game
+  CONFIG = RelWithDebInfo
+  DEP_FILE = CMakeFiles\game.dir\src\gameworld.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -isystem C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../include
+  OBJECT_DIR = CMakeFiles\game.dir
+  OBJECT_FILE_DIR = CMakeFiles\game.dir\src
+
+build CMakeFiles/game.dir/src/player.cpp.obj: CXX_COMPILER__game_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/src/player.cpp || cmake_object_order_depends_target_game
+  CONFIG = RelWithDebInfo
   DEP_FILE = CMakeFiles\game.dir\src\player.cpp.obj.d
-  INCLUDES = -isystem C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../include
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -isystem C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../include
   OBJECT_DIR = CMakeFiles\game.dir
   OBJECT_FILE_DIR = CMakeFiles\game.dir\src
 
-build CMakeFiles/game.dir/src/template.cpp.obj: CXX_COMPILER__game_unscanned_ C$:/Users/Kyle/Documents/Warlocked-Engine/src/template.cpp || cmake_object_order_depends_target_game
+build CMakeFiles/game.dir/src/projectile.cpp.obj: CXX_COMPILER__game_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/src/projectile.cpp || cmake_object_order_depends_target_game
+  CONFIG = RelWithDebInfo
+  DEP_FILE = CMakeFiles\game.dir\src\projectile.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -isystem C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../include
+  OBJECT_DIR = CMakeFiles\game.dir
+  OBJECT_FILE_DIR = CMakeFiles\game.dir\src
+
+build CMakeFiles/game.dir/src/template.cpp.obj: CXX_COMPILER__game_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/src/template.cpp || cmake_object_order_depends_target_game
+  CONFIG = RelWithDebInfo
   DEP_FILE = CMakeFiles\game.dir\src\template.cpp.obj.d
-  INCLUDES = -isystem C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../include
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -isystem C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../include
   OBJECT_DIR = CMakeFiles\game.dir
   OBJECT_FILE_DIR = CMakeFiles\game.dir\src
 
-build CMakeFiles/game.dir/src/textureloader.cpp.obj: CXX_COMPILER__game_unscanned_ C$:/Users/Kyle/Documents/Warlocked-Engine/src/textureloader.cpp || cmake_object_order_depends_target_game
+build CMakeFiles/game.dir/src/textureloader.cpp.obj: CXX_COMPILER__game_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/src/textureloader.cpp || cmake_object_order_depends_target_game
+  CONFIG = RelWithDebInfo
   DEP_FILE = CMakeFiles\game.dir\src\textureloader.cpp.obj.d
-  INCLUDES = -isystem C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../include
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -isystem C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../include
   OBJECT_DIR = CMakeFiles\game.dir
   OBJECT_FILE_DIR = CMakeFiles\game.dir\src
 
@@ -88,8 +129,10 @@ build CMakeFiles/game.dir/src/textureloader.cpp.obj: CXX_COMPILER__game_unscanne
 #############################################
 # Link the executable game.exe
 
-build game.exe: CXX_EXECUTABLE_LINKER__game_ CMakeFiles/game.dir/src/entity.cpp.obj CMakeFiles/game.dir/src/game_main.cpp.obj CMakeFiles/game.dir/src/gameloop.cpp.obj CMakeFiles/game.dir/src/player.cpp.obj CMakeFiles/game.dir/src/template.cpp.obj CMakeFiles/game.dir/src/textureloader.cpp.obj | C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2.lib C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2main.lib C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2_image.lib
-  LINK_LIBRARIES = C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2.lib  C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2main.lib  C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2_image.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+build game.exe: CXX_EXECUTABLE_LINKER__game_RelWithDebInfo CMakeFiles/game.dir/src/entity.cpp.obj CMakeFiles/game.dir/src/game_main.cpp.obj CMakeFiles/game.dir/src/gamearea.cpp.obj CMakeFiles/game.dir/src/gameloop.cpp.obj CMakeFiles/game.dir/src/gameworld.cpp.obj CMakeFiles/game.dir/src/player.cpp.obj CMakeFiles/game.dir/src/projectile.cpp.obj CMakeFiles/game.dir/src/template.cpp.obj CMakeFiles/game.dir/src/textureloader.cpp.obj | C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2.lib C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2main.lib C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2_image.lib third_party/tinytmx/lib/libtinytmx.a third_party/tinytmx/lib/externals/zlib/libzlibstatic.a third_party/tinytmx/lib/externals/tinyxml2/libtinyxml2.a third_party/tinytmx/lib/externals/zstd/build/cmake/lib/libzstd.a || third_party/tinytmx/lib/externals/tinyxml2/libtinyxml2.a third_party/tinytmx/lib/externals/zlib/libzlibstatic.a third_party/tinytmx/lib/externals/zstd/build/cmake/lib/libzstd.a third_party/tinytmx/lib/libtinytmx.a
+  CONFIG = RelWithDebInfo
+  FLAGS = -O2 -g -DNDEBUG
+  LINK_LIBRARIES = C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2.lib  C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2main.lib  C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2_image.lib  third_party/tinytmx/lib/libtinytmx.a  third_party/tinytmx/lib/externals/zlib/libzlibstatic.a  third_party/tinytmx/lib/externals/tinyxml2/libtinyxml2.a  third_party/tinytmx/lib/externals/zstd/build/cmake/lib/libzstd.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\game.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -121,10 +164,1488 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Kyle/Documents/Warlocked-Engine/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build third_party/tinytmx/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\Kyle\Documents\Warlocked-Engine -BC:\Users\Kyle\Documents\Warlocked-Engine\build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/edit_cache: phony third_party/tinytmx/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build third_party/tinytmx/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Kyle\Documents\Warlocked-Engine -BC:\Users\Kyle\Documents\Warlocked-Engine\build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/rebuild_cache: phony third_party/tinytmx/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build third_party/tinytmx/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build third_party/tinytmx/CMakeFiles/install.util: CUSTOM_COMMAND third_party/tinytmx/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/install: phony third_party/tinytmx/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build third_party/tinytmx/CMakeFiles/install/local.util: CUSTOM_COMMAND third_party/tinytmx/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/install/local: phony third_party/tinytmx/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build third_party/tinytmx/CMakeFiles/install/strip.util: CUSTOM_COMMAND third_party/tinytmx/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/install/strip: phony third_party/tinytmx/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target tinytmx
+
+
+#############################################
+# Order-only phony target for tinytmx
+
+build cmake_object_order_depends_target_tinytmx: phony || cmake_object_order_depends_target_libzstd_static cmake_object_order_depends_target_tinyxml2 cmake_object_order_depends_target_zlibstatic
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/base64.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/base64.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\base64.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxColor.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxColor.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxColor.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxDataChunkTile.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxDataChunkTile.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxDataChunkTile.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxEllipse.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxEllipse.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxEllipse.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxGrid.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxGrid.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxGrid.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxGroupLayer.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxGroupLayer.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxGroupLayer.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxImage.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxImage.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxImage.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxImageLayer.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxImageLayer.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxImageLayer.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxMap.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxMap.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxMap.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxObject.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxObject.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxObject.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxObjectGroup.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxObjectGroup.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxObjectGroup.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxPolyObject.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxPolyObject.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxPolyObject.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxProperty.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxProperty.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxProperty.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxPropertySet.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxPropertySet.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxPropertySet.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxText.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxText.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxText.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxTile.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxTile.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxTile.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxLayer.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxLayer.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxLayer.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxTileLayer.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxTileLayer.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxTileLayer.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxTileOffset.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxTileOffset.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxTileOffset.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxTileset.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxTileset.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxTileset.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxTransformations.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxTransformations.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxTransformations.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxUtil.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxUtil.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxUtil.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxWangColor.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxWangColor.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxWangColor.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxWangSet.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxWangSet.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxWangSet.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxWangSetArray.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxWangSetArray.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxWangSetArray.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+build third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxWangTile.cpp.obj: CXX_COMPILER__tinytmx_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/src/tinytmxWangTile.cpp || cmake_object_order_depends_target_tinytmx
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src\tinytmxWangTile.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target tinytmx
+
+
+#############################################
+# Link the static library third_party\tinytmx\lib\libtinytmx.a
+
+build third_party/tinytmx/lib/libtinytmx.a: CXX_STATIC_LIBRARY_LINKER__tinytmx_RelWithDebInfo third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/base64.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxColor.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxDataChunkTile.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxEllipse.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxGrid.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxGroupLayer.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxImage.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxImageLayer.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxMap.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxObject.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxObjectGroup.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxPolyObject.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxProperty.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxPropertySet.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxText.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxTile.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxLayer.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxTileLayer.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxTileOffset.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxTileset.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxTransformations.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxUtil.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxWangColor.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxWangSet.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxWangSetArray.cpp.obj third_party/tinytmx/lib/CMakeFiles/tinytmx.dir/src/tinytmxWangTile.cpp.obj || third_party/tinytmx/lib/externals/tinyxml2/libtinyxml2.a third_party/tinytmx/lib/externals/zlib/libzlibstatic.a third_party/tinytmx/lib/externals/zstd/build/cmake/lib/libzstd.a
+  CONFIG = RelWithDebInfo
+  LANGUAGE_COMPILE_FLAGS = -O2 -g -DNDEBUG
+  OBJECT_DIR = third_party\tinytmx\lib\CMakeFiles\tinytmx.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = third_party\tinytmx\lib\libtinytmx.a
+  TARGET_PDB = tinytmx.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build third_party/tinytmx/lib/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\Kyle\Documents\Warlocked-Engine -BC:\Users\Kyle\Documents\Warlocked-Engine\build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/edit_cache: phony third_party/tinytmx/lib/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build third_party/tinytmx/lib/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Kyle\Documents\Warlocked-Engine -BC:\Users\Kyle\Documents\Warlocked-Engine\build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/rebuild_cache: phony third_party/tinytmx/lib/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build third_party/tinytmx/lib/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build third_party/tinytmx/lib/CMakeFiles/install.util: CUSTOM_COMMAND third_party/tinytmx/lib/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/install: phony third_party/tinytmx/lib/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build third_party/tinytmx/lib/CMakeFiles/install/local.util: CUSTOM_COMMAND third_party/tinytmx/lib/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/install/local: phony third_party/tinytmx/lib/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build third_party/tinytmx/lib/CMakeFiles/install/strip.util: CUSTOM_COMMAND third_party/tinytmx/lib/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/install/strip: phony third_party/tinytmx/lib/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build third_party/tinytmx/lib/externals/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\Kyle\Documents\Warlocked-Engine -BC:\Users\Kyle\Documents\Warlocked-Engine\build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/edit_cache: phony third_party/tinytmx/lib/externals/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build third_party/tinytmx/lib/externals/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Kyle\Documents\Warlocked-Engine -BC:\Users\Kyle\Documents\Warlocked-Engine\build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/rebuild_cache: phony third_party/tinytmx/lib/externals/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build third_party/tinytmx/lib/externals/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build third_party/tinytmx/lib/externals/CMakeFiles/install.util: CUSTOM_COMMAND third_party/tinytmx/lib/externals/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/install: phony third_party/tinytmx/lib/externals/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build third_party/tinytmx/lib/externals/CMakeFiles/install/local.util: CUSTOM_COMMAND third_party/tinytmx/lib/externals/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/install/local: phony third_party/tinytmx/lib/externals/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build third_party/tinytmx/lib/externals/CMakeFiles/install/strip.util: CUSTOM_COMMAND third_party/tinytmx/lib/externals/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/install/strip: phony third_party/tinytmx/lib/externals/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target tinyxml2
+
+
+#############################################
+# Order-only phony target for tinyxml2
+
+build cmake_object_order_depends_target_tinyxml2: phony || .
+
+build third_party/tinytmx/lib/externals/tinyxml2/CMakeFiles/tinyxml2.dir/tinyxml2.cpp.obj: CXX_COMPILER__tinyxml2_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2/tinyxml2.cpp || cmake_object_order_depends_target_tinyxml2
+  CONFIG = RelWithDebInfo
+  DEP_FILE = third_party\tinytmx\lib\externals\tinyxml2\CMakeFiles\tinyxml2.dir\tinyxml2.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2
+  OBJECT_DIR = third_party\tinytmx\lib\externals\tinyxml2\CMakeFiles\tinyxml2.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\tinyxml2\CMakeFiles\tinyxml2.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target tinyxml2
+
+
+#############################################
+# Link the static library third_party\tinytmx\lib\externals\tinyxml2\libtinyxml2.a
+
+build third_party/tinytmx/lib/externals/tinyxml2/libtinyxml2.a: CXX_STATIC_LIBRARY_LINKER__tinyxml2_RelWithDebInfo third_party/tinytmx/lib/externals/tinyxml2/CMakeFiles/tinyxml2.dir/tinyxml2.cpp.obj
+  CONFIG = RelWithDebInfo
+  LANGUAGE_COMPILE_FLAGS = -O2 -g -DNDEBUG
+  OBJECT_DIR = third_party\tinytmx\lib\externals\tinyxml2\CMakeFiles\tinyxml2.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = third_party\tinytmx\lib\externals\tinyxml2\libtinyxml2.a
+  TARGET_PDB = tinyxml2.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build third_party/tinytmx/lib/externals/tinyxml2/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\tinyxml2 && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\Kyle\Documents\Warlocked-Engine -BC:\Users\Kyle\Documents\Warlocked-Engine\build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/tinyxml2/edit_cache: phony third_party/tinytmx/lib/externals/tinyxml2/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build third_party/tinytmx/lib/externals/tinyxml2/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\tinyxml2 && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Kyle\Documents\Warlocked-Engine -BC:\Users\Kyle\Documents\Warlocked-Engine\build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/tinyxml2/rebuild_cache: phony third_party/tinytmx/lib/externals/tinyxml2/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build third_party/tinytmx/lib/externals/tinyxml2/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build third_party/tinytmx/lib/externals/tinyxml2/CMakeFiles/install.util: CUSTOM_COMMAND third_party/tinytmx/lib/externals/tinyxml2/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\tinyxml2 && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/tinyxml2/install: phony third_party/tinytmx/lib/externals/tinyxml2/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build third_party/tinytmx/lib/externals/tinyxml2/CMakeFiles/install/local.util: CUSTOM_COMMAND third_party/tinytmx/lib/externals/tinyxml2/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\tinyxml2 && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/tinyxml2/install/local: phony third_party/tinytmx/lib/externals/tinyxml2/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build third_party/tinytmx/lib/externals/tinyxml2/CMakeFiles/install/strip.util: CUSTOM_COMMAND third_party/tinytmx/lib/externals/tinyxml2/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\tinyxml2 && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/tinyxml2/install/strip: phony third_party/tinytmx/lib/externals/tinyxml2/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target zlib
+
+
+#############################################
+# Order-only phony target for zlib
+
+build cmake_object_order_depends_target_zlib: phony || third_party/tinytmx/lib/externals/zlib/zlib1rc.obj
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/adler32.c.obj: C_COMPILER__zlib_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/adler32.c || cmake_object_order_depends_target_zlib
+  CONFIG = RelWithDebInfo
+  DEFINES = -DZLIB_DLL -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir\adler32.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/compress.c.obj: C_COMPILER__zlib_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/compress.c || cmake_object_order_depends_target_zlib
+  CONFIG = RelWithDebInfo
+  DEFINES = -DZLIB_DLL -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir\compress.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/crc32.c.obj: C_COMPILER__zlib_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/crc32.c || cmake_object_order_depends_target_zlib
+  CONFIG = RelWithDebInfo
+  DEFINES = -DZLIB_DLL -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir\crc32.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/deflate.c.obj: C_COMPILER__zlib_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/deflate.c || cmake_object_order_depends_target_zlib
+  CONFIG = RelWithDebInfo
+  DEFINES = -DZLIB_DLL -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir\deflate.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/gzclose.c.obj: C_COMPILER__zlib_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/gzclose.c || cmake_object_order_depends_target_zlib
+  CONFIG = RelWithDebInfo
+  DEFINES = -DZLIB_DLL -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir\gzclose.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/gzlib.c.obj: C_COMPILER__zlib_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/gzlib.c || cmake_object_order_depends_target_zlib
+  CONFIG = RelWithDebInfo
+  DEFINES = -DZLIB_DLL -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir\gzlib.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/gzread.c.obj: C_COMPILER__zlib_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/gzread.c || cmake_object_order_depends_target_zlib
+  CONFIG = RelWithDebInfo
+  DEFINES = -DZLIB_DLL -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir\gzread.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/gzwrite.c.obj: C_COMPILER__zlib_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/gzwrite.c || cmake_object_order_depends_target_zlib
+  CONFIG = RelWithDebInfo
+  DEFINES = -DZLIB_DLL -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir\gzwrite.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/inflate.c.obj: C_COMPILER__zlib_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/inflate.c || cmake_object_order_depends_target_zlib
+  CONFIG = RelWithDebInfo
+  DEFINES = -DZLIB_DLL -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir\inflate.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/infback.c.obj: C_COMPILER__zlib_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/infback.c || cmake_object_order_depends_target_zlib
+  CONFIG = RelWithDebInfo
+  DEFINES = -DZLIB_DLL -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir\infback.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/inftrees.c.obj: C_COMPILER__zlib_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/inftrees.c || cmake_object_order_depends_target_zlib
+  CONFIG = RelWithDebInfo
+  DEFINES = -DZLIB_DLL -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir\inftrees.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/inffast.c.obj: C_COMPILER__zlib_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/inffast.c || cmake_object_order_depends_target_zlib
+  CONFIG = RelWithDebInfo
+  DEFINES = -DZLIB_DLL -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir\inffast.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/trees.c.obj: C_COMPILER__zlib_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/trees.c || cmake_object_order_depends_target_zlib
+  CONFIG = RelWithDebInfo
+  DEFINES = -DZLIB_DLL -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir\trees.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/uncompr.c.obj: C_COMPILER__zlib_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/uncompr.c || cmake_object_order_depends_target_zlib
+  CONFIG = RelWithDebInfo
+  DEFINES = -DZLIB_DLL -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir\uncompr.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/zutil.c.obj: C_COMPILER__zlib_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/zutil.c || cmake_object_order_depends_target_zlib
+  CONFIG = RelWithDebInfo
+  DEFINES = -DZLIB_DLL -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir\zutil.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target zlib
+
+
+#############################################
+# Link the shared library third_party\tinytmx\lib\externals\zlib\libzlib.dll
+
+build third_party/tinytmx/lib/externals/zlib/libzlib.dll third_party/tinytmx/lib/externals/zlib/libzlib.dll.a: C_SHARED_LIBRARY_LINKER__zlib_RelWithDebInfo third_party/tinytmx/lib/externals/zlib/zlib1rc.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/adler32.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/compress.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/crc32.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/deflate.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/gzclose.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/gzlib.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/gzread.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/gzwrite.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/inflate.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/infback.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/inftrees.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/inffast.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/trees.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/uncompr.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlib.dir/zutil.c.obj
+  CONFIG = RelWithDebInfo
+  LANGUAGE_COMPILE_FLAGS = -O2 -g -DNDEBUG
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlib.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  RESTAT = 1
+  TARGET_FILE = third_party\tinytmx\lib\externals\zlib\libzlib.dll
+  TARGET_IMPLIB = third_party\tinytmx\lib\externals\zlib\libzlib.dll.a
+  TARGET_PDB = zlib.dll.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target zlibstatic
+
+
+#############################################
+# Order-only phony target for zlibstatic
+
+build cmake_object_order_depends_target_zlibstatic: phony || .
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/adler32.c.obj: C_COMPILER__zlibstatic_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/adler32.c || cmake_object_order_depends_target_zlibstatic
+  CONFIG = RelWithDebInfo
+  DEFINES = -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir\adler32.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/compress.c.obj: C_COMPILER__zlibstatic_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/compress.c || cmake_object_order_depends_target_zlibstatic
+  CONFIG = RelWithDebInfo
+  DEFINES = -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir\compress.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/crc32.c.obj: C_COMPILER__zlibstatic_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/crc32.c || cmake_object_order_depends_target_zlibstatic
+  CONFIG = RelWithDebInfo
+  DEFINES = -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir\crc32.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/deflate.c.obj: C_COMPILER__zlibstatic_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/deflate.c || cmake_object_order_depends_target_zlibstatic
+  CONFIG = RelWithDebInfo
+  DEFINES = -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir\deflate.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/gzclose.c.obj: C_COMPILER__zlibstatic_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/gzclose.c || cmake_object_order_depends_target_zlibstatic
+  CONFIG = RelWithDebInfo
+  DEFINES = -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir\gzclose.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/gzlib.c.obj: C_COMPILER__zlibstatic_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/gzlib.c || cmake_object_order_depends_target_zlibstatic
+  CONFIG = RelWithDebInfo
+  DEFINES = -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir\gzlib.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/gzread.c.obj: C_COMPILER__zlibstatic_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/gzread.c || cmake_object_order_depends_target_zlibstatic
+  CONFIG = RelWithDebInfo
+  DEFINES = -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir\gzread.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/gzwrite.c.obj: C_COMPILER__zlibstatic_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/gzwrite.c || cmake_object_order_depends_target_zlibstatic
+  CONFIG = RelWithDebInfo
+  DEFINES = -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir\gzwrite.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/inflate.c.obj: C_COMPILER__zlibstatic_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/inflate.c || cmake_object_order_depends_target_zlibstatic
+  CONFIG = RelWithDebInfo
+  DEFINES = -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir\inflate.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/infback.c.obj: C_COMPILER__zlibstatic_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/infback.c || cmake_object_order_depends_target_zlibstatic
+  CONFIG = RelWithDebInfo
+  DEFINES = -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir\infback.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/inftrees.c.obj: C_COMPILER__zlibstatic_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/inftrees.c || cmake_object_order_depends_target_zlibstatic
+  CONFIG = RelWithDebInfo
+  DEFINES = -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir\inftrees.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/inffast.c.obj: C_COMPILER__zlibstatic_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/inffast.c || cmake_object_order_depends_target_zlibstatic
+  CONFIG = RelWithDebInfo
+  DEFINES = -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir\inffast.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/trees.c.obj: C_COMPILER__zlibstatic_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/trees.c || cmake_object_order_depends_target_zlibstatic
+  CONFIG = RelWithDebInfo
+  DEFINES = -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir\trees.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/uncompr.c.obj: C_COMPILER__zlibstatic_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/uncompr.c || cmake_object_order_depends_target_zlibstatic
+  CONFIG = RelWithDebInfo
+  DEFINES = -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir\uncompr.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/zutil.c.obj: C_COMPILER__zlibstatic_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/zutil.c || cmake_object_order_depends_target_zlibstatic
+  CONFIG = RelWithDebInfo
+  DEFINES = -D_LARGEFILE64_SOURCE=1
+  DEP_FILE = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir\zutil.c.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -IC:/Users/Kyle/Documents/Warlocked-Engine
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target zlibstatic
+
+
+#############################################
+# Link the static library third_party\tinytmx\lib\externals\zlib\libzlibstatic.a
+
+build third_party/tinytmx/lib/externals/zlib/libzlibstatic.a: C_STATIC_LIBRARY_LINKER__zlibstatic_RelWithDebInfo third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/adler32.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/compress.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/crc32.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/deflate.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/gzclose.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/gzlib.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/gzread.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/gzwrite.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/inflate.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/infback.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/inftrees.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/inffast.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/trees.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/uncompr.c.obj third_party/tinytmx/lib/externals/zlib/CMakeFiles/zlibstatic.dir/zutil.c.obj
+  CONFIG = RelWithDebInfo
+  LANGUAGE_COMPILE_FLAGS = -O2 -g -DNDEBUG
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zlib\CMakeFiles\zlibstatic.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = third_party\tinytmx\lib\externals\zlib\libzlibstatic.a
+  TARGET_PDB = zlibstatic.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zlib && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\Kyle\Documents\Warlocked-Engine -BC:\Users\Kyle\Documents\Warlocked-Engine\build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/zlib/edit_cache: phony third_party/tinytmx/lib/externals/zlib/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zlib && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Kyle\Documents\Warlocked-Engine -BC:\Users\Kyle\Documents\Warlocked-Engine\build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/zlib/rebuild_cache: phony third_party/tinytmx/lib/externals/zlib/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build third_party/tinytmx/lib/externals/zlib/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/install.util: CUSTOM_COMMAND third_party/tinytmx/lib/externals/zlib/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zlib && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/zlib/install: phony third_party/tinytmx/lib/externals/zlib/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/install/local.util: CUSTOM_COMMAND third_party/tinytmx/lib/externals/zlib/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zlib && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/zlib/install/local: phony third_party/tinytmx/lib/externals/zlib/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build third_party/tinytmx/lib/externals/zlib/CMakeFiles/install/strip.util: CUSTOM_COMMAND third_party/tinytmx/lib/externals/zlib/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zlib && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/zlib/install/strip: phony third_party/tinytmx/lib/externals/zlib/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for third_party\tinytmx\lib\externals\zlib\zlib1rc.obj
+
+build third_party/tinytmx/lib/externals/zlib/zlib1rc.obj | ${cmake_ninja_workdir}third_party/tinytmx/lib/externals/zlib/zlib1rc.obj: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zlib && C:\mingw64\bin\windres.exe -D GCC_WINDRES -I C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib -I C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib -o C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib/zlib1rc.obj -i C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/win32/zlib1.rc"
+  DESC = Generating zlib1rc.obj
+  restat = 1
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for clean-all
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/clean-all: phony third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeFiles/clean-all
+
+
+#############################################
+# Utility command for edit_cache
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zstd\build\cmake && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\Kyle\Documents\Warlocked-Engine -BC:\Users\Kyle\Documents\Warlocked-Engine\build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/edit_cache: phony third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zstd\build\cmake && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Kyle\Documents\Warlocked-Engine -BC:\Users\Kyle\Documents\Warlocked-Engine\build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/rebuild_cache: phony third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeFiles/install.util: CUSTOM_COMMAND third_party/tinytmx/lib/externals/zstd/build/cmake/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zstd\build\cmake && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/install: phony third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeFiles/install/local.util: CUSTOM_COMMAND third_party/tinytmx/lib/externals/zstd/build/cmake/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zstd\build\cmake && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/install/local: phony third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeFiles/install/strip.util: CUSTOM_COMMAND third_party/tinytmx/lib/externals/zstd/build/cmake/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zstd\build\cmake && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/install/strip: phony third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for third_party\tinytmx\lib\externals\zstd\build\cmake\CMakeFiles\clean-all
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeFiles/clean-all | ${cmake_ninja_workdir}third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeFiles/clean-all: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zstd\build\cmake && C:\mingw64\bin\ninja.exe clean && rm -rf C:/Users/Kyle/Documents/Warlocked-Engine/build/"
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target libzstd_static
+
+
+#############################################
+# Order-only phony target for libzstd_static
+
+build cmake_object_order_depends_target_libzstd_static: phony || .
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/debug.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/common/debug.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\common\debug.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\common
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/entropy_common.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/common/entropy_common.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\common\entropy_common.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\common
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/error_private.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/common/error_private.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\common\error_private.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\common
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/fse_decompress.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/common/fse_decompress.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\common\fse_decompress.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\common
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/pool.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/common/pool.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\common\pool.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\common
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/threading.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/common/threading.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\common\threading.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\common
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/xxhash.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/common/xxhash.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\common\xxhash.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\common
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/zstd_common.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/common/zstd_common.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\common\zstd_common.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\common
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/fse_compress.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/compress/fse_compress.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress\fse_compress.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/hist.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/compress/hist.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress\hist.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/huf_compress.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/compress/huf_compress.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress\huf_compress.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_compress.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/compress/zstd_compress.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress\zstd_compress.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_compress_literals.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/compress/zstd_compress_literals.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress\zstd_compress_literals.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_compress_sequences.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/compress/zstd_compress_sequences.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress\zstd_compress_sequences.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_compress_superblock.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/compress/zstd_compress_superblock.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress\zstd_compress_superblock.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_double_fast.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/compress/zstd_double_fast.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress\zstd_double_fast.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_fast.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/compress/zstd_fast.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress\zstd_fast.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_lazy.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/compress/zstd_lazy.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress\zstd_lazy.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_ldm.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/compress/zstd_ldm.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress\zstd_ldm.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_opt.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/compress/zstd_opt.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress\zstd_opt.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstdmt_compress.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/compress/zstdmt_compress.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress\zstdmt_compress.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\compress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/decompress/huf_decompress.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/decompress/huf_decompress.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\decompress\huf_decompress.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\decompress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/decompress/zstd_ddict.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/decompress/zstd_ddict.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\decompress\zstd_ddict.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\decompress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/decompress/zstd_decompress.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/decompress/zstd_decompress.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\decompress\zstd_decompress.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\decompress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/decompress/zstd_decompress_block.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/decompress/zstd_decompress_block.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\decompress\zstd_decompress_block.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\decompress
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/dictBuilder/cover.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/dictBuilder/cover.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\dictBuilder\cover.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\dictBuilder
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/dictBuilder/divsufsort.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/dictBuilder/divsufsort.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\dictBuilder\divsufsort.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\dictBuilder
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/dictBuilder/fastcover.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/dictBuilder/fastcover.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\dictBuilder\fastcover.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\dictBuilder
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/dictBuilder/zdict.c.obj: C_COMPILER__libzstd_static_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/lib/dictBuilder/zdict.c || cmake_object_order_depends_target_libzstd_static
+  CONFIG = RelWithDebInfo
+  DEFINES = -DXXH_NAMESPACE=ZSTD_ -DZSTD_LEGACY_SUPPORT=0 -DZSTD_MULTITHREAD
+  DEP_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\dictBuilder\zdict.c.obj.d
+  FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/../../lib/common
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  OBJECT_FILE_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir\__\__\__\lib\dictBuilder
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target libzstd_static
+
+
+#############################################
+# Link the static library third_party\tinytmx\lib\externals\zstd\build\cmake\lib\libzstd.a
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/libzstd.a: C_STATIC_LIBRARY_LINKER__libzstd_static_RelWithDebInfo third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/debug.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/entropy_common.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/error_private.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/fse_decompress.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/pool.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/threading.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/xxhash.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/common/zstd_common.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/fse_compress.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/hist.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/huf_compress.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_compress.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_compress_literals.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_compress_sequences.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_compress_superblock.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_double_fast.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_fast.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_lazy.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_ldm.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstd_opt.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/compress/zstdmt_compress.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/decompress/huf_decompress.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/decompress/zstd_ddict.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/decompress/zstd_decompress.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/decompress/zstd_decompress_block.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/dictBuilder/cover.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/dictBuilder/divsufsort.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/dictBuilder/fastcover.c.obj third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/libzstd_static.dir/__/__/__/lib/dictBuilder/zdict.c.obj
+  CONFIG = RelWithDebInfo
+  LANGUAGE_COMPILE_FLAGS = -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes -O2 -g -DNDEBUG
+  OBJECT_DIR = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\libzstd_static.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = third_party\tinytmx\lib\externals\zstd\build\cmake\lib\libzstd.a
+  TARGET_PDB = zstd.a.dbg
+
+
+#############################################
+# Utility command for uninstall
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/uninstall: phony third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/uninstall
+
+
+#############################################
+# Utility command for edit_cache
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zstd\build\cmake\lib && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\Kyle\Documents\Warlocked-Engine -BC:\Users\Kyle\Documents\Warlocked-Engine\build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/edit_cache: phony third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zstd\build\cmake\lib && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Kyle\Documents\Warlocked-Engine -BC:\Users\Kyle\Documents\Warlocked-Engine\build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/rebuild_cache: phony third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/install.util: CUSTOM_COMMAND third_party/tinytmx/lib/externals/zstd/build/cmake/lib/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zstd\build\cmake\lib && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/install: phony third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/install/local.util: CUSTOM_COMMAND third_party/tinytmx/lib/externals/zstd/build/cmake/lib/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zstd\build\cmake\lib && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/install/local: phony third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/install/strip.util: CUSTOM_COMMAND third_party/tinytmx/lib/externals/zstd/build/cmake/lib/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zstd\build\cmake\lib && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/install/strip: phony third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for third_party\tinytmx\lib\externals\zstd\build\cmake\lib\CMakeFiles\uninstall
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/uninstall | ${cmake_ninja_workdir}third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeFiles/uninstall: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\Kyle\Documents\Warlocked-Engine\build\third_party\tinytmx\lib\externals\zstd\build\cmake\lib && "C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib/cmake_uninstall.cmake"
+
 # =============================================================================
 # Target aliases.
 
+build clean-all: phony third_party/tinytmx/lib/externals/zstd/build/cmake/clean-all
+
 build game: phony game.exe
+
+build libtinytmx.a: phony third_party/tinytmx/lib/libtinytmx.a
+
+build libtinyxml2.a: phony third_party/tinytmx/lib/externals/tinyxml2/libtinyxml2.a
+
+build libzlib.dll: phony third_party/tinytmx/lib/externals/zlib/libzlib.dll
+
+build libzlibstatic.a: phony third_party/tinytmx/lib/externals/zlib/libzlibstatic.a
+
+build libzstd.a: phony third_party/tinytmx/lib/externals/zstd/build/cmake/lib/libzstd.a
+
+build libzstd_static: phony third_party/tinytmx/lib/externals/zstd/build/cmake/lib/libzstd.a
+
+build tinytmx: phony third_party/tinytmx/lib/libtinytmx.a
+
+build tinyxml2: phony third_party/tinytmx/lib/externals/tinyxml2/libtinyxml2.a
+
+build uninstall: phony third_party/tinytmx/lib/externals/zstd/build/cmake/lib/uninstall
+
+build zlib: phony third_party/tinytmx/lib/externals/zlib/libzlib.dll
+
+build zlibstatic: phony third_party/tinytmx/lib/externals/zlib/libzlibstatic.a
 
 # =============================================================================
 # Folder targets.
@@ -134,14 +1655,112 @@ build game: phony game.exe
 #############################################
 # Folder: C:/Users/Kyle/Documents/Warlocked-Engine/build
 
-build codegen: phony
+build codegen: phony third_party/tinytmx/codegen
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx
+
+build third_party/tinytmx/codegen: phony third_party/tinytmx/lib/codegen
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib
+
+build third_party/tinytmx/lib/codegen: phony third_party/tinytmx/lib/externals/codegen
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals
+
+build third_party/tinytmx/lib/externals/codegen: phony third_party/tinytmx/lib/externals/tinyxml2/codegen third_party/tinytmx/lib/externals/zlib/codegen third_party/tinytmx/lib/externals/zstd/build/cmake/codegen
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/tinyxml2
+
+build third_party/tinytmx/lib/externals/tinyxml2/codegen: phony
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib
+
+build third_party/tinytmx/lib/externals/zlib/codegen: phony
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/codegen: phony third_party/tinytmx/lib/externals/zstd/build/cmake/lib/codegen
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/codegen: phony
 
 # =============================================================================
 
 #############################################
 # Folder: C:/Users/Kyle/Documents/Warlocked-Engine/build
 
-build all: phony game.exe
+build all: phony game.exe third_party/tinytmx/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx
+
+build third_party/tinytmx/all: phony third_party/tinytmx/lib/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib
+
+build third_party/tinytmx/lib/all: phony third_party/tinytmx/lib/libtinytmx.a third_party/tinytmx/lib/externals/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals
+
+build third_party/tinytmx/lib/externals/all: phony third_party/tinytmx/lib/externals/tinyxml2/all third_party/tinytmx/lib/externals/zlib/all third_party/tinytmx/lib/externals/zstd/build/cmake/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/tinyxml2
+
+build third_party/tinytmx/lib/externals/tinyxml2/all: phony third_party/tinytmx/lib/externals/tinyxml2/libtinyxml2.a
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib
+
+build third_party/tinytmx/lib/externals/zlib/all: phony third_party/tinytmx/lib/externals/zlib/libzlib.dll third_party/tinytmx/lib/externals/zlib/libzlibstatic.a
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/all: phony third_party/tinytmx/lib/externals/zstd/build/cmake/lib/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib
+
+build third_party/tinytmx/lib/externals/zstd/build/cmake/lib/all: phony third_party/tinytmx/lib/externals/zstd/build/cmake/lib/libzstd.a
 
 # =============================================================================
 # Built-in targets
@@ -150,14 +1769,14 @@ build all: phony game.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:/Users/Kyle/Documents/Warlocked-Engine/build/cmake_install.cmake: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/FeatureSummary.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/WindowsPaths.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/sdl2-config-version.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/sdl2-config.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/sdl2_image-config-version.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/sdl2_image-config.cmake CMakeCache.txt CMakeFiles/4.0.0-rc4/CMakeCCompiler.cmake CMakeFiles/4.0.0-rc4/CMakeCXXCompiler.cmake CMakeFiles/4.0.0-rc4/CMakeRCCompiler.cmake CMakeFiles/4.0.0-rc4/CMakeSystem.cmake
+build build.ninja C$:/Users/Kyle/Documents/Warlocked-Engine/build/cmake_install.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/cmake_install.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/cmake_install.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/cmake_install.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/tinyxml2/cmake_install.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zlib/cmake_install.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/cmake_install.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tinytmx/lib/externals/zstd/build/cmake/lib/cmake_install.cmake: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-4.0/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CheckCCompilerFlag.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CheckCXXSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CheckFunctionExists.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CheckIncludeFile.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CheckIncludeFileCXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CheckTypeSize.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/FeatureSummary.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CheckFlagCommonConfig.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/sdl2-config-version.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/sdl2-config.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/sdl2_image-config-version.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/sdl2_image-config.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/cmake/CompilerWarnings.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/cmake/PreventInSourceBuilds.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/cmake/StandardProjectSettings.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/cmake/tinytmx.pc.in C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/cmake/tinytmxConfig.cmake.in C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/cmake/tinytmxProjectSettings.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/zconf.h.cmakein C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/zlib.pc.cmakein C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/GetZstdLibraryVersion.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib/cmake_uninstall.cmake.in CMakeCache.txt CMakeFiles/4.0.0-rc4/CMakeCCompiler.cmake CMakeFiles/4.0.0-rc4/CMakeCXXCompiler.cmake CMakeFiles/4.0.0-rc4/CMakeRCCompiler.cmake CMakeFiles/4.0.0-rc4/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/FeatureSummary.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/WindowsPaths.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/sdl2-config-version.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/sdl2-config.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/sdl2_image-config-version.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/sdl2_image-config.cmake CMakeCache.txt CMakeFiles/4.0.0-rc4/CMakeCCompiler.cmake CMakeFiles/4.0.0-rc4/CMakeCXXCompiler.cmake CMakeFiles/4.0.0-rc4/CMakeRCCompiler.cmake CMakeFiles/4.0.0-rc4/CMakeSystem.cmake: phony
+build C$:/Program$ Files/CMake/share/cmake-4.0/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CheckCCompilerFlag.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CheckCXXSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CheckFunctionExists.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CheckIncludeFile.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CheckIncludeFileCXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/CheckTypeSize.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/FeatureSummary.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CheckFlagCommonConfig.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-4.0/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/sdl2-config-version.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/sdl2-config.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/sdl2_image-config-version.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/sdl2_image-config.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/cmake/CompilerWarnings.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/cmake/PreventInSourceBuilds.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/cmake/StandardProjectSettings.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/cmake/tinytmx.pc.in C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/cmake/tinytmxConfig.cmake.in C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/cmake/tinytmxProjectSettings.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/tinyxml2/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/zconf.h.cmakein C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zlib/zlib.pc.cmakein C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/GetZstdLibraryVersion.cmake C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib/CMakeLists.txt C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/lib/cmake_uninstall.cmake.in CMakeCache.txt CMakeFiles/4.0.0-rc4/CMakeCCompiler.cmake CMakeFiles/4.0.0-rc4/CMakeCXXCompiler.cmake CMakeFiles/4.0.0-rc4/CMakeRCCompiler.cmake CMakeFiles/4.0.0-rc4/CMakeSystem.cmake: phony
 
 
 #############################################

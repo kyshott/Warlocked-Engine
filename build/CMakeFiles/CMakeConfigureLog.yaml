@@ -643,3 +643,608 @@ events:
       Running the CXX compiler's linker: "Configured with: ../configure --prefix=/R/winlibs_staging_msvcrt64/inst_gcc-14.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-msvcrt-posix-seh, built by Brecht Sanders, r3' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_msvcrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_msvcrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_msvcrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_msvcrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs_staging_msvcrt64/gcc-14.2.0/build_mingw/mingw-w64 CFLAGS='-I/c/Prog/winlibs_staging_msvcrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_msvcrt/custombuilt64/share/binutils/bin/ld.exe" "--version"
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "third_party/tinytmx/lib/externals/zlib/CMakeLists.txt:23 (check_include_file)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-s5bevd"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-s5bevd"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-s5bevd'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_1177e
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_1177e.dir/CheckIncludeFile.c.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-s5bevd/CheckIncludeFile.c
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_1177e.dir/CheckIncludeFile.c.obj -o cmTC_1177e.exe -Wl,--out-implib,libcmTC_1177e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "third_party/tinytmx/lib/externals/zlib/CMakeLists.txt:24 (check_include_file)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-l8b1me"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-l8b1me"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-l8b1me'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_59c37
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_59c37.dir/CheckIncludeFile.c.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-l8b1me/CheckIncludeFile.c
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_59c37.dir/CheckIncludeFile.c.obj -o cmTC_59c37.exe -Wl,--out-implib,libcmTC_59c37.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "third_party/tinytmx/lib/externals/zlib/CMakeLists.txt:25 (check_include_file)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-ckm11h"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-ckm11h"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-ckm11h'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_6d27c
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_6d27c.dir/CheckIncludeFile.c.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-ckm11h/CheckIncludeFile.c
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_6d27c.dir/CheckIncludeFile.c.obj -o cmTC_6d27c.exe -Wl,--out-implib,libcmTC_6d27c.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckTypeSize.cmake:212 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckTypeSize.cmake:339 (__check_type_size_impl)"
+      - "third_party/tinytmx/lib/externals/zlib/CMakeLists.txt:43 (check_type_size)"
+    checks:
+      - "Check size of off64_t"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-j9fya6"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-j9fya6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_OFF64_T"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-j9fya6'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_26a6e
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_TYPES_H -D_LARGEFILE64_SOURCE=1   -o CMakeFiles/cmTC_26a6e.dir/OFF64_T.c.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-j9fya6/OFF64_T.c
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_26a6e.dir/OFF64_T.c.obj -o cmTC_26a6e.exe -Wl,--out-implib,libcmTC_26a6e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "third_party/tinytmx/lib/externals/zlib/CMakeLists.txt:52 (check_function_exists)"
+    checks:
+      - "Looking for fseeko"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-ln9kzt"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-ln9kzt"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_FSEEKO"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-ln9kzt'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_21148
+        [1/2] C:\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=fseeko -o CMakeFiles/cmTC_21148.dir/CheckFunctionExists.c.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-ln9kzt/CheckFunctionExists.c
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=fseeko  CMakeFiles/cmTC_21148.dir/CheckFunctionExists.c.obj -o cmTC_21148.exe -Wl,--out-implib,libcmTC_21148.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "third_party/tinytmx/lib/externals/zlib/CMakeLists.txt:60 (check_include_file)"
+    checks:
+      - "Looking for unistd.h"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-9d2l7g"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-9d2l7g"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "Z_HAVE_UNISTD_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-9d2l7g'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_df25b
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_df25b.dir/CheckIncludeFile.c.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-9d2l7g/CheckIncludeFile.c
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_df25b.dir/CheckIncludeFile.c.obj -o cmTC_df25b.exe -Wl,--out-implib,libcmTC_df25b.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:16 (CHECK_CXX_COMPILER_FLAG)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:26 (EnableCompilerFlag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt:69 (ADD_ZSTD_COMPILATION_FLAGS)"
+    checks:
+      - "Performing Test CXX_FLAG_STD_CPLUSPLUS11"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-uz877i"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-uz877i"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules"
+    buildResult:
+      variable: "CXX_FLAG_STD_CPLUSPLUS11"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-uz877i'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_e2e0e
+        [1/2] C:\\mingw64\\bin\\c++.exe -DCXX_FLAG_STD_CPLUSPLUS11  -std=c++11 -o CMakeFiles/cmTC_e2e0e.dir/src.cxx.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-uz877i/src.cxx
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\c++.exe   CMakeFiles/cmTC_e2e0e.dir/src.cxx.obj -o cmTC_e2e0e.exe -Wl,--out-implib,libcmTC_e2e0e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:10 (CHECK_C_COMPILER_FLAG)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:28 (EnableCompilerFlag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt:69 (ADD_ZSTD_COMPILATION_FLAGS)"
+    checks:
+      - "Performing Test C_FLAG_STD_C99"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-01hbp3"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-01hbp3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules"
+    buildResult:
+      variable: "C_FLAG_STD_C99"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-01hbp3'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_b0ad5
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DC_FLAG_STD_C99  -std=c99 -o CMakeFiles/cmTC_b0ad5.dir/src.c.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-01hbp3/src.c
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_b0ad5.dir/src.c.obj -o cmTC_b0ad5.exe -Wl,--out-implib,libcmTC_b0ad5.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:10 (CHECK_C_COMPILER_FLAG)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:33 (EnableCompilerFlag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt:69 (ADD_ZSTD_COMPILATION_FLAGS)"
+    checks:
+      - "Performing Test C_FLAG_WALL"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-s18bak"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-s18bak"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -std=c99"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules"
+    buildResult:
+      variable: "C_FLAG_WALL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-s18bak'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_ee5d2
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DC_FLAG_WALL  -std=c99    -Wall -o CMakeFiles/cmTC_ee5d2.dir/src.c.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-s18bak/src.c
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -std=c99  CMakeFiles/cmTC_ee5d2.dir/src.c.obj -o cmTC_ee5d2.exe -Wl,--out-implib,libcmTC_ee5d2.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:16 (CHECK_CXX_COMPILER_FLAG)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:33 (EnableCompilerFlag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt:69 (ADD_ZSTD_COMPILATION_FLAGS)"
+    checks:
+      - "Performing Test CXX_FLAG_WALL"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-16hq7o"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-16hq7o"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules"
+    buildResult:
+      variable: "CXX_FLAG_WALL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-16hq7o'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_eccc2
+        [1/2] C:\\mingw64\\bin\\c++.exe -DCXX_FLAG_WALL  -std=c++11    -Wall -o CMakeFiles/cmTC_eccc2.dir/src.cxx.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-16hq7o/src.cxx
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\c++.exe -std=c++11  CMakeFiles/cmTC_eccc2.dir/src.cxx.obj -o cmTC_eccc2.exe -Wl,--out-implib,libcmTC_eccc2.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:10 (CHECK_C_COMPILER_FLAG)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:35 (EnableCompilerFlag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt:69 (ADD_ZSTD_COMPILATION_FLAGS)"
+    checks:
+      - "Performing Test C_FLAG_WEXTRA"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-bjc8sl"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-bjc8sl"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -std=c99 -Wall"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules"
+    buildResult:
+      variable: "C_FLAG_WEXTRA"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-bjc8sl'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_ac4d6
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DC_FLAG_WEXTRA  -std=c99 -Wall    -Wextra -o CMakeFiles/cmTC_ac4d6.dir/src.c.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-bjc8sl/src.c
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -std=c99 -Wall  CMakeFiles/cmTC_ac4d6.dir/src.c.obj -o cmTC_ac4d6.exe -Wl,--out-implib,libcmTC_ac4d6.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:16 (CHECK_CXX_COMPILER_FLAG)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:35 (EnableCompilerFlag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt:69 (ADD_ZSTD_COMPILATION_FLAGS)"
+    checks:
+      - "Performing Test CXX_FLAG_WEXTRA"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-ykimqf"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-ykimqf"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -Wall"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules"
+    buildResult:
+      variable: "CXX_FLAG_WEXTRA"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-ykimqf'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_c2f5a
+        [1/2] C:\\mingw64\\bin\\c++.exe -DCXX_FLAG_WEXTRA  -std=c++11 -Wall    -Wextra -o CMakeFiles/cmTC_c2f5a.dir/src.cxx.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-ykimqf/src.cxx
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\c++.exe -std=c++11 -Wall  CMakeFiles/cmTC_c2f5a.dir/src.cxx.obj -o cmTC_c2f5a.exe -Wl,--out-implib,libcmTC_c2f5a.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:10 (CHECK_C_COMPILER_FLAG)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:36 (EnableCompilerFlag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt:69 (ADD_ZSTD_COMPILATION_FLAGS)"
+    checks:
+      - "Performing Test C_FLAG_WUNDEF"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-py7yms"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-py7yms"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -std=c99 -Wall -Wextra"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules"
+    buildResult:
+      variable: "C_FLAG_WUNDEF"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-py7yms'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_38406
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DC_FLAG_WUNDEF  -std=c99 -Wall -Wextra    -Wundef -o CMakeFiles/cmTC_38406.dir/src.c.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-py7yms/src.c
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -std=c99 -Wall -Wextra  CMakeFiles/cmTC_38406.dir/src.c.obj -o cmTC_38406.exe -Wl,--out-implib,libcmTC_38406.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:16 (CHECK_CXX_COMPILER_FLAG)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:36 (EnableCompilerFlag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt:69 (ADD_ZSTD_COMPILATION_FLAGS)"
+    checks:
+      - "Performing Test CXX_FLAG_WUNDEF"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-z5hl2r"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-z5hl2r"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -Wall -Wextra"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules"
+    buildResult:
+      variable: "CXX_FLAG_WUNDEF"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-z5hl2r'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_5565a
+        [1/2] C:\\mingw64\\bin\\c++.exe -DCXX_FLAG_WUNDEF  -std=c++11 -Wall -Wextra    -Wundef -o CMakeFiles/cmTC_5565a.dir/src.cxx.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-z5hl2r/src.cxx
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\c++.exe -std=c++11 -Wall -Wextra  CMakeFiles/cmTC_5565a.dir/src.cxx.obj -o cmTC_5565a.exe -Wl,--out-implib,libcmTC_5565a.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:10 (CHECK_C_COMPILER_FLAG)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:37 (EnableCompilerFlag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt:69 (ADD_ZSTD_COMPILATION_FLAGS)"
+    checks:
+      - "Performing Test C_FLAG_WSHADOW"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-arfm3g"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-arfm3g"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -std=c99 -Wall -Wextra -Wundef"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules"
+    buildResult:
+      variable: "C_FLAG_WSHADOW"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-arfm3g'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_5408c
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DC_FLAG_WSHADOW  -std=c99 -Wall -Wextra -Wundef    -Wshadow -o CMakeFiles/cmTC_5408c.dir/src.c.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-arfm3g/src.c
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -std=c99 -Wall -Wextra -Wundef  CMakeFiles/cmTC_5408c.dir/src.c.obj -o cmTC_5408c.exe -Wl,--out-implib,libcmTC_5408c.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:16 (CHECK_CXX_COMPILER_FLAG)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:37 (EnableCompilerFlag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt:69 (ADD_ZSTD_COMPILATION_FLAGS)"
+    checks:
+      - "Performing Test CXX_FLAG_WSHADOW"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-7tmuwm"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-7tmuwm"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -Wall -Wextra -Wundef"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules"
+    buildResult:
+      variable: "CXX_FLAG_WSHADOW"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-7tmuwm'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_95342
+        [1/2] C:\\mingw64\\bin\\c++.exe -DCXX_FLAG_WSHADOW  -std=c++11 -Wall -Wextra -Wundef    -Wshadow -o CMakeFiles/cmTC_95342.dir/src.cxx.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-7tmuwm/src.cxx
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\c++.exe -std=c++11 -Wall -Wextra -Wundef  CMakeFiles/cmTC_95342.dir/src.cxx.obj -o cmTC_95342.exe -Wl,--out-implib,libcmTC_95342.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:10 (CHECK_C_COMPILER_FLAG)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:38 (EnableCompilerFlag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt:69 (ADD_ZSTD_COMPILATION_FLAGS)"
+    checks:
+      - "Performing Test C_FLAG_WCAST_ALIGN"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-6quho5"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-6quho5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -std=c99 -Wall -Wextra -Wundef -Wshadow"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules"
+    buildResult:
+      variable: "C_FLAG_WCAST_ALIGN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-6quho5'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_97f7f
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DC_FLAG_WCAST_ALIGN  -std=c99 -Wall -Wextra -Wundef -Wshadow    -Wcast-align -o CMakeFiles/cmTC_97f7f.dir/src.c.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-6quho5/src.c
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -std=c99 -Wall -Wextra -Wundef -Wshadow  CMakeFiles/cmTC_97f7f.dir/src.c.obj -o cmTC_97f7f.exe -Wl,--out-implib,libcmTC_97f7f.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:16 (CHECK_CXX_COMPILER_FLAG)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:38 (EnableCompilerFlag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt:69 (ADD_ZSTD_COMPILATION_FLAGS)"
+    checks:
+      - "Performing Test CXX_FLAG_WCAST_ALIGN"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-rdku5o"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-rdku5o"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -Wall -Wextra -Wundef -Wshadow"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules"
+    buildResult:
+      variable: "CXX_FLAG_WCAST_ALIGN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-rdku5o'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_bd036
+        [1/2] C:\\mingw64\\bin\\c++.exe -DCXX_FLAG_WCAST_ALIGN  -std=c++11 -Wall -Wextra -Wundef -Wshadow    -Wcast-align -o CMakeFiles/cmTC_bd036.dir/src.cxx.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-rdku5o/src.cxx
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\c++.exe -std=c++11 -Wall -Wextra -Wundef -Wshadow  CMakeFiles/cmTC_bd036.dir/src.cxx.obj -o cmTC_bd036.exe -Wl,--out-implib,libcmTC_bd036.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:10 (CHECK_C_COMPILER_FLAG)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:39 (EnableCompilerFlag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt:69 (ADD_ZSTD_COMPILATION_FLAGS)"
+    checks:
+      - "Performing Test C_FLAG_WCAST_QUAL"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-4ykkn0"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-4ykkn0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules"
+    buildResult:
+      variable: "C_FLAG_WCAST_QUAL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-4ykkn0'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_2770f
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DC_FLAG_WCAST_QUAL  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align    -Wcast-qual -o CMakeFiles/cmTC_2770f.dir/src.c.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-4ykkn0/src.c
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align  CMakeFiles/cmTC_2770f.dir/src.c.obj -o cmTC_2770f.exe -Wl,--out-implib,libcmTC_2770f.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:16 (CHECK_CXX_COMPILER_FLAG)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:39 (EnableCompilerFlag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt:69 (ADD_ZSTD_COMPILATION_FLAGS)"
+    checks:
+      - "Performing Test CXX_FLAG_WCAST_QUAL"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-vpchxi"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-vpchxi"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -Wall -Wextra -Wundef -Wshadow -Wcast-align"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules"
+    buildResult:
+      variable: "CXX_FLAG_WCAST_QUAL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-vpchxi'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_a85e2
+        [1/2] C:\\mingw64\\bin\\c++.exe -DCXX_FLAG_WCAST_QUAL  -std=c++11 -Wall -Wextra -Wundef -Wshadow -Wcast-align    -Wcast-qual -o CMakeFiles/cmTC_a85e2.dir/src.cxx.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-vpchxi/src.cxx
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\c++.exe -std=c++11 -Wall -Wextra -Wundef -Wshadow -Wcast-align  CMakeFiles/cmTC_a85e2.dir/src.cxx.obj -o cmTC_a85e2.exe -Wl,--out-implib,libcmTC_a85e2.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:10 (CHECK_C_COMPILER_FLAG)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake:40 (EnableCompilerFlag)"
+      - "third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeLists.txt:69 (ADD_ZSTD_COMPILATION_FLAGS)"
+    checks:
+      - "Performing Test C_FLAG_WSTRICT_PROTOTYPES"
+    directories:
+      source: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-jbid3a"
+      binary: "C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-jbid3a"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/externals/zstd/build/cmake/CMakeModules"
+    buildResult:
+      variable: "C_FLAG_WSTRICT_PROTOTYPES"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-jbid3a'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_9f429
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DC_FLAG_WSTRICT_PROTOTYPES  -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual    -Wstrict-prototypes -o CMakeFiles/cmTC_9f429.dir/src.c.obj -c C:/Users/Kyle/Documents/Warlocked-Engine/build/CMakeFiles/CMakeScratch/TryCompile-jbid3a/src.c
+        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -std=c99 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual  CMakeFiles/cmTC_9f429.dir/src.c.obj -o cmTC_9f429.exe -Wl,--out-implib,libcmTC_9f429.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...

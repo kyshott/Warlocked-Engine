@@ -5,6 +5,7 @@
 #include <vector>
 #include "entity.hpp"
 #include "memory"
+#include <tinytmx.hpp>
 
 class GameArea {
 public:
@@ -19,12 +20,12 @@ public:
     const int HEIGHT;
 
     // Area state
-    void initMap();
+    void initMap(std::string mapFile);
     void saveState(); // Include memory freeing as part of this method
     void loadState();
 
     // Entity management / general functionality
-    void addEntity(Entity* e);
+    void addEntity(Entity e);
     void areaUpdate(float dt, SDL_Renderer* renderer);
     void layerRender(); // Render layers of the map from tilemap. Helper function
 

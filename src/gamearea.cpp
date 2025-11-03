@@ -1,13 +1,18 @@
 #include "headers/gamearea.hpp"
 #include "memory"
+#include <tinytmx.hpp>
 
-void GameArea::initMap() {
+void GameArea::initMap(std::string mapFile) {
     // Initialize the game area, load map data, etc... loaded from file
+    // Render map layers, initialize entities, etc
     // Iterate through all entities stored in the area from loadState and initialize them 
 
-    loadState();
+    tinytmx::Map *map = new tinytmx::Map();
+    map->ParseFile(mapFile);
 
-    // Initialize map - probably entails loading a tilemap texture or something simple since entity management is done in loadState()
+    std::vector<tinytmx::Layer*>layers = map->GetLayers();
+
+    loadState();
 }
 
 void GameArea::layerRender() {
@@ -30,9 +35,9 @@ void GameArea::loadState() {
 }
 
 // I can either pass a unique pointer as a parameter and add it to the vector, or pass a raw pointer and convert it to a unique pointer here... idk which is better
-void GameArea::addEntity(Entity* e) {
+void GameArea::addEntity(Entity e) {
 
-    entities.push_back(std::make_unique<Entity>(e));
+   entities.push_back(std::make_unique<Entity>(e));
 
 }
 

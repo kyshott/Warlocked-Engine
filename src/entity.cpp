@@ -77,8 +77,10 @@ void Entity::update(SDL_Renderer* renderer, float dt) {
 }
 
 // AABB collision detection using area entity smart pointer vector.
-bool Entity::collider(double dt, const std::vector<std::unique_ptr<Entity>> others) {
+bool Entity::collider(double dt, const std::vector<std::unique_ptr<Entity>>& others) {
 	// Find way to dereference unique pointer from vector so rect can be accessed
+
+	return true;
 }
 
 // Window border collision detection/clamping to avoid going out of bounds. Set override to 'true' to disable.

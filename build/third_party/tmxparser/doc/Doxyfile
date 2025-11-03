@@ -1,0 +1,8 @@
+PROJECT_NAME = "tmxparser"
+PROJECT_NUMBER = "2.1.0"
+OUTPUT_DIRECTORY = C:/Users/Kyle/Documents/Warlocked-Engine/build/third_party/tmxparser/doc
+INPUT = C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tmxparser/src C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tmxparser/doc C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tmxparser/README.md C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tmxparser/CHANGELOG.md
+EXCLUDE = C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tmxparser/src/miniz.c
+USE_MDFILE_AS_MAINPAGE = C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tmxparser/README.md
+EXAMPLE_PATH = C:/Users/Kyle/Documents/Warlocked-Engine/third_party/tmxparser/examples
+JAVADOC_AUTOBRIEF = YES
