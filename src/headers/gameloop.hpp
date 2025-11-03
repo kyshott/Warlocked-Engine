@@ -3,6 +3,7 @@
 
 #include <SDL.h>
 #include "player.hpp"
+#include "gamearea.hpp"
 
 class Game {
 public:

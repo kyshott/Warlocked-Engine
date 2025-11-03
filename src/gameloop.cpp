@@ -1,6 +1,7 @@
 #include "headers/gameloop.hpp"
 #include "headers/player.hpp"
 #include <memory>
+#include "headers/gamearea.hpp"
 
 //Initialize SDL and create a window and renderer
 void Game::initSDL() {
@@ -27,6 +28,10 @@ void Game::initObjects() {
 	Player player(500, 500, 48, 48, renderer, "resources/Player/Warlock.PNG", true, 400.0f, DOWN);
 
 	Player player2(250, 250, 48, 48, renderer, "resources/Player/Warlock.PNG", true, 400.0f, DOWN);
+
+	GameArea gameArea(0);
+
+	gameArea.initMap("resources/Maps/testmap.tmx", renderer);
 
 	controllables.push_back(player);
 	controllables.push_back(player2);
