@@ -27,14 +27,10 @@ void Game::initObjects() {
 	//std::unique_ptr<Player> player = std::make_unique<Player>(500, 500, 48, 48, renderer, "resources/Player/Warlock.PNG", true, 400.0f, DOWN); Sample smart pointer declaration
 	Player player(500, 500, 48, 48, renderer, "resources/Player/Warlock.PNG", true, 400.0f, DOWN);
 
-	Player player2(250, 250, 48, 48, renderer, "resources/Player/Warlock.PNG", true, 400.0f, DOWN);
-
-	GameArea gameArea(0);
-
-	gameArea.initMap("resources/Maps/testmap.tmx", renderer);
+	//Player player2(250, 250, 48, 48, renderer, "resources/Player/Warlock.PNG", true, 400.0f, DOWN);
 
 	controllables.push_back(player);
-	controllables.push_back(player2);
+	//controllables.push_back(player2);
 }
 
 //Main game loop - basically is the "tick" of the game
@@ -43,6 +39,10 @@ void Game::gameloop() {
 	initSDL();
 
 	initObjects();
+
+	GameArea gameArea(0);
+
+	gameArea.initMap("resources/Maps/testmap.tmx", renderer);
 
 	bool quit = false;
 
@@ -76,9 +76,12 @@ void Game::gameloop() {
 		//Clears the screen of last seen sprites after delay, which ultimately creates the "framerate" effect
 		SDL_RenderClear(renderer);
 
+		gameArea.areaUpdate(deltaTime, renderer);
+
 		for (auto& obj : controllables) {
 			obj.update(renderer, deltaTime);
 		}
+
 		//player.updateTexture(renderer);
 
 		SDL_RenderPresent(renderer);

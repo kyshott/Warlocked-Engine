@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="48" tileheight="48" infinite="0" nextlayerid="3" nextobjectid="1">
  <tileset firstgid="1" name="test" tilewidth="48" tileheight="48" tilecount="25" columns="5">
-  <image source="../../../../warlocked/assets/pngImports/tileset1.PNG" width="240" height="240"/>
+  <image source="C:\Users\Kyle\Documents\Warlocked-Engine\build\resources\Maps\tileset1.PNG" width="240" height="240"/>
  </tileset>
  <layer id="1" name="Tile Layer 1" width="20" height="20">
   <data encoding="csv">

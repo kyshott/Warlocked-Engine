@@ -12,9 +12,7 @@ void GameArea::initMap(std::string mapFile, SDL_Renderer* renderer) {
     // Initialize the game area, load map data, etc... loaded from file
     // Render map layers, initialize entities, etc
     // Iterate through all entities stored in the area from loadState and initialize them 
-
-    // Create smart pointer for map
-    std::unique_ptr<tinytmx::Map> map = std::make_unique<tinytmx::Map>();
+    map = std::make_unique<tinytmx::Map>();
     map->ParseFile(mapFile);
 
     // Get tileset, image, then path to use for SDL rendering.
@@ -26,15 +24,27 @@ void GameArea::initMap(std::string mapFile, SDL_Renderer* renderer) {
     std::cout << "Layers: " << map->GetNumLayers() << std::endl;
     std::cout << "Tilesets: " << map->GetNumTilesets() << std::endl;
 
-    SDL_Texture* tileTex = loadTexture(tilepath, renderer);
+    tileset = loadTexture(tilepath, renderer);
 
     int w, h;
-    SDL_QueryTexture(tileTex, nullptr, nullptr, &w, &h);
+    SDL_QueryTexture(tileset, nullptr, nullptr, &w, &h);
     std::cout << "Tileset texture size: " << w << "x" << h << std::endl;
 
-    layerRender(map.get(), tileTex, set, renderer);
-
     //loadState();
+}
+
+// Delta time included as parameter here for future use with entity updates and animated tiles
+void GameArea::areaUpdate(float dt, SDL_Renderer* renderer) {
+
+    /*
+    for (auto& entity : entities) {
+        entity->update(renderer, dt);
+        entity->collider(dt, entities);
+    }
+    */
+
+    layerRender(map.get(), tileset, map->GetTileset(0), renderer);
+   
 }
 
 void GameArea::layerRender(tinytmx::Map* map, SDL_Texture* tileTex, const tinytmx::Tileset* tileset, SDL_Renderer* renderer) {
@@ -85,6 +95,8 @@ void GameArea::saveState() {
     // Save entity positional and other instance data to something
 
     entities.clear(); // Free up memory for entities
+
+    SDL_DestroyTexture(tileset); // Free tileset texture memory - cannot use unique ptr here because SDL_Texture is a C struct
 }
 
 void GameArea::loadState() {
@@ -100,14 +112,3 @@ void GameArea::addEntity(Entity e) {
    entities.push_back(std::make_unique<Entity>(e));
 
 }
-
-// Updates everything in the game area, including entity positions, rendering, collision etc
-void GameArea::areaUpdate(float dt, SDL_Renderer* renderer) {
-
-    for (auto& entity : entities) {
-        entity->update(renderer, dt);
-        entity->collider(dt, entities);
-    }
-   
-}
-

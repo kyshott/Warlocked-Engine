@@ -17,6 +17,8 @@ public:
 
     SDL_Texture* tileset;
 
+    std::unique_ptr<tinytmx::Map> map;
+
     std::vector<std::unique_ptr<Entity>> entities;
 
     GameArea(int idk);
