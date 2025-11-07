@@ -1,3 +1,7 @@
+TODO: 
+- Make sure to verify that the CMake build for tinytmx is compatible with ninja compilation for entire project. If not, CMake build for tinytmx may need to be converted to Ninja.
+- Change resources/assets directory to dedicated folder to allow for easier .gitignore management and ease of access.
+
 1. Game area has updater for everything in it while it is active
 2. Iterate through all entities - call the collider for each
 3. The "current area" is selected in the game loop, and the update is ran. All entities update in this game area, and their positions within the area are saved. if they move out of the area and into another,

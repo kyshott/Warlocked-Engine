@@ -2,6 +2,7 @@
 #include "headers/player.hpp"
 #include <memory>
 #include "headers/gamearea.hpp"
+#include "headers/controller.hpp"
 
 //Initialize SDL and create a window and renderer
 void Game::initSDL() {
@@ -11,7 +12,7 @@ void Game::initSDL() {
 	SCREEN_HEIGHT = 1000;
 
 	mainScreen = SDL_CreateWindow("Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-	renderer = SDL_CreateRenderer(mainScreen, -1, 0);
+	renderer = SDL_CreateRenderer(mainScreen, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC); // Use vsync
 }
 
 //Close out SDL and any other SDL objects... add more later?
@@ -22,27 +23,16 @@ void Game::close() {
 	SDL_Quit();
 }
 
-void Game::initObjects() {
-
-	//std::unique_ptr<Player> player = std::make_unique<Player>(500, 500, 48, 48, renderer, "resources/Player/Warlock.PNG", true, 400.0f, DOWN); Sample smart pointer declaration
-	Player player(500, 500, 48, 48, renderer, "resources/Player/Warlock.PNG", true, 400.0f, DOWN);
-
-	//Player player2(250, 250, 48, 48, renderer, "resources/Player/Warlock.PNG", true, 400.0f, DOWN);
-
-	controllables.push_back(player);
-	//controllables.push_back(player2);
-}
-
 //Main game loop - basically is the "tick" of the game
 void Game::gameloop() {
 
 	initSDL();
 
-	initObjects();
+	Player player(500, 500, 48, 48, renderer, "resources/Player/Warlock.PNG", true, 75.0f, DOWN);
 
-	GameArea gameArea(0);
+	GameArea gameArea("resources/Maps/testmap.tmx", renderer, &player);
 
-	gameArea.initMap("resources/Maps/testmap.tmx", renderer);
+	Controller controller(&player);
 
 	bool quit = false;
 
@@ -51,46 +41,30 @@ void Game::gameloop() {
 	Uint32 lastTick = SDL_GetTicks();
 
 	//While application is running - everything in this while loop is the "tick" or "loop"
-	while (!quit)
-	{
-		Uint32 frameStart = SDL_GetTicks();
-		Uint32 currentTick = SDL_GetTicks();
-        float deltaTime = (currentTick - lastTick) / 1000.0f; // seconds
-        lastTick = currentTick;
+	while (controller.quit == false) {
+		Uint64 now = SDL_GetPerformanceCounter();
+		float deltaTime = (now - lastTick) / (float)SDL_GetPerformanceFrequency();
+		lastTick = now;
 
 		if (deltaTime > 0.1f) deltaTime = 0.1f;
 
-		while (SDL_PollEvent(&e) != 0)
-		{
-			//User requests quit
-			if (e.type == SDL_QUIT)
-			{
-				quit = true;
-			}
-			//Handle input for all controllable objects
-			for (auto& obj : controllables) {
-				obj.handleMoveEvent(e);
-			}
+		// Accept user input
+		controller.input(deltaTime, e);
 
-		}
 		//Clears the screen of last seen sprites after delay, which ultimately creates the "framerate" effect
 		SDL_RenderClear(renderer);
 
 		gameArea.areaUpdate(deltaTime, renderer);
 
-		for (auto& obj : controllables) {
-			obj.update(renderer, deltaTime);
-		}
-
-		//player.updateTexture(renderer);
-
 		SDL_RenderPresent(renderer);
 
 		// FPS cap at ~60 fps - 1000 / desired fps for calc
-		Uint32 frameTime = SDL_GetTicks() - frameStart;
+		//Uint32 frameTime = SDL_GetTicks() - frameStart;
+		/*
         if (frameTime < 16) {
             SDL_Delay(16 - frameTime);
         }
+			*/
 
 	}
 

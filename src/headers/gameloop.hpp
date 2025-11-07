@@ -4,11 +4,10 @@
 #include <SDL.h>
 #include "player.hpp"
 #include "gamearea.hpp"
+#include "controller.hpp"
 
 class Game {
 public:
-
-	std::vector<Player> controllables;
 
 	SDL_Renderer* renderer;
 	SDL_Window* mainScreen;
@@ -16,7 +15,6 @@ public:
 	void initSDL();
 	void gameloop();
 	void close();
-	void initObjects();
 
 private:
 	int SCREEN_WIDTH;
