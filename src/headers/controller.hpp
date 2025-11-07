@@ -7,7 +7,7 @@
 class Controller {
 public:
 
-    bool quit; // Quit flag that can be accessed by external game loop
+    bool quit; // Quit flag that can be accessed by external game loop. Should this be in the controller or somewhere else?
 
     Controller(Player* ref); // Constructor method that creates player reference
     
