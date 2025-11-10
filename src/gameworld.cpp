@@ -1,6 +1,6 @@
 #include "headers/gameworld.hpp"
 
-void GameWorld::switchArea() {
+void GameWorld::switchArea(int idx) {
     // Logic for switching between different game areas
     // Update currentArea to point to the new area
 

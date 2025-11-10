@@ -5,8 +5,17 @@
 #include <vector>
 #include "entity.hpp"
 
-enum PlayerState {IDLE, MOVING, FIRING}; // For Player state machine
+// Player state machine enumeration. Similar to the directional enumeration, contains
+// all possible states the player may be in. Available states: IDLE, MOVING, FIRING.
+enum PlayerState {IDLE, MOVING, FIRING};
 
+/**
+ * @brief The player class.
+ * 
+ * Extends the Entity class to create a controllable Entity. Is able to take in processed inputs from the controller class to change its state,
+ * direction, position, etc.
+ * 
+ */
 class Player : public Entity {
 public:
 

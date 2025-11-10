@@ -3,7 +3,6 @@
 #include <iostream>
 #include <filesystem>
 
-// Define entity rectangle starting position and width/height, sprite path, animation state, speed and direction.
 Entity::Entity(int x, int y, int w, int h, SDL_Renderer* renderer, std::string givenpath, bool animated, float spd, Direction _dir) {
 
 	contacting = false; // AABB collision
@@ -30,7 +29,6 @@ Entity::Entity(int x, int y, int w, int h, SDL_Renderer* renderer, std::string g
 	initTexture(renderer);
 }
 
-//Update player position based on key held.
 void Entity::update(SDL_Renderer* renderer, float dt) {
 
 	//std::cout << "Speed: " << speed << " dt: " << dt << " dir: " << dir << " rect.x: " << rect.x << " rect.y: " << rect.y << std::endl;
@@ -76,14 +74,12 @@ void Entity::update(SDL_Renderer* renderer, float dt) {
     renderSprite(renderer);
 }
 
-// AABB collision detection using area entity smart pointer vector.
 bool Entity::collider(double dt, const std::vector<std::unique_ptr<Entity>>& others) {
 	// Find way to dereference unique pointer from vector so rect can be accessed
 
 	return true;
 }
 
-// Window border collision detection/clamping to avoid going out of bounds. Set override to 'true' to disable.
 void Entity::borderCollision(int levelWidth, int levelHeight, bool override) {
 	
 	if(override) return;
@@ -94,7 +90,6 @@ void Entity::borderCollision(int levelWidth, int levelHeight, bool override) {
 
 }
 
-//Render / update sprite of entity based on position
 void Entity::renderSprite(SDL_Renderer* renderer) {
 	
 	srcRect.x = spriteindex * spriteWidth;
@@ -102,7 +97,6 @@ void Entity::renderSprite(SDL_Renderer* renderer) {
 	SDL_RenderCopy(renderer, texture, &srcRect, &rect);
 }
 
-//Initializes the texture or "sprite sheet" for the entity. Recommended to use PNGs with "left to right" sprite sheet layout for easier sprite indexing.
 void Entity::initTexture(SDL_Renderer* renderer) {
 
 	std::cout << "Rendering from path: " << path << std::endl;
