@@ -2,7 +2,6 @@
 #include <SDL_image.h>
 #include <iostream>
 
-//Loads image file, converts to a surface, passes into texture, then frees surface and returns texture
 SDL_Texture* loadTexture(std::string path, SDL_Renderer* renderer) {
 	
 	SDL_Surface* loadedSurface = IMG_Load(path.c_str());

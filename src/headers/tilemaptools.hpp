@@ -6,6 +6,17 @@
 #include <memory>
 #include "entity.hpp"
 
+/**
+ * @brief Creates a map texture given a tmx map.
+ * 
+ * Creates a map texture given a tinytmx map object. The map, by itself, is simply a texture and must be rendered properly in order to function properly.
+ * The map texture by itself must be rendered after creation, which is done in another method.
+ * 
+ * @param renderer SDL_Renderer used for rendering.
+ * @param map Unique pointer to tinytmx map object.
+ * 
+ * @returns SDL_Texture object containing the parsed map data.
+ */
 SDL_Texture* createMapTexture(SDL_Renderer* renderer, std::unique_ptr<tinytmx::Map> map);
 
 void renderMap(SDL_Renderer* renderer, SDL_Texture* mapTexture);

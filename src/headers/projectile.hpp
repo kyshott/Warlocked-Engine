@@ -4,6 +4,12 @@
 #include <SDL.h>
 #include "entity.hpp"
 
+/**
+ * @brief A fireball that explodes on impact.
+ * 
+ * Not implemented currently. Needs a particle system for visual effects.
+ * 
+ */
 class FireBall : public Entity {
 public:
 
