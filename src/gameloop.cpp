@@ -12,10 +12,9 @@ void Game::initSDL() {
 	SCREEN_HEIGHT = 1000;
 
 	mainScreen = SDL_CreateWindow("Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-	renderer = SDL_CreateRenderer(mainScreen, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC); // Use vsync
+	renderer = SDL_CreateRenderer(mainScreen, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC); // Use vsync. Implement toggle to turn this on/off.
 }
 
-//Close out SDL and any other SDL objects... add more later?
 void Game::close() {
 	
 	SDL_DestroyRenderer(renderer);
@@ -23,7 +22,6 @@ void Game::close() {
 	SDL_Quit();
 }
 
-//Main game loop - basically is the "tick" of the game
 void Game::gameloop() {
 
 	initSDL();
@@ -43,7 +41,7 @@ void Game::gameloop() {
 	//While application is running - everything in this while loop is the "tick" or "loop"
 	while (controller.quit == false) {
 		Uint64 now = SDL_GetPerformanceCounter();
-		float deltaTime = (now - lastTick) / (float)SDL_GetPerformanceFrequency();
+		float deltaTime = (now - lastTick) / (float)SDL_GetPerformanceFrequency(); // Type cast to allow for per-device delta time
 		lastTick = now;
 
 		if (deltaTime > 0.1f) deltaTime = 0.1f;
@@ -58,15 +56,8 @@ void Game::gameloop() {
 
 		SDL_RenderPresent(renderer);
 
-		// FPS cap at ~60 fps - 1000 / desired fps for calc
-		//Uint32 frameTime = SDL_GetTicks() - frameStart;
-		/*
-        if (frameTime < 16) {
-            SDL_Delay(16 - frameTime);
-        }
-			*/
-
 	}
 
+	gameArea.saveState();
 	close();
 }

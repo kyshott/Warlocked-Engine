@@ -18,6 +18,8 @@
 class Game {
 public:
 
+	GameArea activearea;
+
 	// The main renderer for the game. Used virtually EVERYWHERE for drawing to the screen. Only one renderer is allowed
 	// as per the SDL documentation. Single-thread rendering only.
 	SDL_Renderer* renderer;
