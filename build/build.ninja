@@ -129,6 +129,14 @@ build CMakeFiles/game.dir/src/textureloader.cpp.obj: CXX_COMPILER__game_unscanne
   OBJECT_DIR = CMakeFiles\game.dir
   OBJECT_FILE_DIR = CMakeFiles\game.dir\src
 
+build CMakeFiles/game.dir/src/tilemaptools.cpp.obj: CXX_COMPILER__game_unscanned_RelWithDebInfo C$:/Users/Kyle/Documents/Warlocked-Engine/src/tilemaptools.cpp || cmake_object_order_depends_target_game
+  CONFIG = RelWithDebInfo
+  DEP_FILE = CMakeFiles\game.dir\src\tilemaptools.cpp.obj.d
+  FLAGS = -O2 -g -DNDEBUG
+  INCLUDES = -IC:/Users/Kyle/Documents/Warlocked-Engine/third_party/tinytmx/lib/include -isystem C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../include
+  OBJECT_DIR = CMakeFiles\game.dir
+  OBJECT_FILE_DIR = CMakeFiles\game.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target game
@@ -137,7 +145,7 @@ build CMakeFiles/game.dir/src/textureloader.cpp.obj: CXX_COMPILER__game_unscanne
 #############################################
 # Link the executable game.exe
 
-build game.exe: CXX_EXECUTABLE_LINKER__game_RelWithDebInfo CMakeFiles/game.dir/src/controller.cpp.obj CMakeFiles/game.dir/src/entity.cpp.obj CMakeFiles/game.dir/src/game_main.cpp.obj CMakeFiles/game.dir/src/gamearea.cpp.obj CMakeFiles/game.dir/src/gameloop.cpp.obj CMakeFiles/game.dir/src/gameworld.cpp.obj CMakeFiles/game.dir/src/player.cpp.obj CMakeFiles/game.dir/src/projectile.cpp.obj CMakeFiles/game.dir/src/template.cpp.obj CMakeFiles/game.dir/src/textureloader.cpp.obj | C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2.lib C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2main.lib C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2_image.lib third_party/tinytmx/lib/libtinytmx.a third_party/tinytmx/lib/externals/zlib/libzlibstatic.a third_party/tinytmx/lib/externals/tinyxml2/libtinyxml2.a third_party/tinytmx/lib/externals/zstd/build/cmake/lib/libzstd.a || third_party/tinytmx/lib/externals/tinyxml2/libtinyxml2.a third_party/tinytmx/lib/externals/zlib/libzlibstatic.a third_party/tinytmx/lib/externals/zstd/build/cmake/lib/libzstd.a third_party/tinytmx/lib/libtinytmx.a
+build game.exe: CXX_EXECUTABLE_LINKER__game_RelWithDebInfo CMakeFiles/game.dir/src/controller.cpp.obj CMakeFiles/game.dir/src/entity.cpp.obj CMakeFiles/game.dir/src/game_main.cpp.obj CMakeFiles/game.dir/src/gamearea.cpp.obj CMakeFiles/game.dir/src/gameloop.cpp.obj CMakeFiles/game.dir/src/gameworld.cpp.obj CMakeFiles/game.dir/src/player.cpp.obj CMakeFiles/game.dir/src/projectile.cpp.obj CMakeFiles/game.dir/src/template.cpp.obj CMakeFiles/game.dir/src/textureloader.cpp.obj CMakeFiles/game.dir/src/tilemaptools.cpp.obj | C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2.lib C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2main.lib C$:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2_image.lib third_party/tinytmx/lib/libtinytmx.a third_party/tinytmx/lib/externals/zlib/libzlibstatic.a third_party/tinytmx/lib/externals/tinyxml2/libtinyxml2.a third_party/tinytmx/lib/externals/zstd/build/cmake/lib/libzstd.a || third_party/tinytmx/lib/externals/tinyxml2/libtinyxml2.a third_party/tinytmx/lib/externals/zlib/libzlibstatic.a third_party/tinytmx/lib/externals/zstd/build/cmake/lib/libzstd.a third_party/tinytmx/lib/libtinytmx.a
   CONFIG = RelWithDebInfo
   FLAGS = -O2 -g -DNDEBUG
   LINK_LIBRARIES = C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2.lib  C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2main.lib  C:/Users/Kyle/Documents/Warlocked-Engine/third_party/SDL2/cmake/../lib/x64/SDL2_image.lib  third_party/tinytmx/lib/libtinytmx.a  third_party/tinytmx/lib/externals/zlib/libzlibstatic.a  third_party/tinytmx/lib/externals/tinyxml2/libtinyxml2.a  third_party/tinytmx/lib/externals/zstd/build/cmake/lib/libzstd.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

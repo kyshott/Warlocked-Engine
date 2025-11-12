@@ -27,7 +27,7 @@ public:
     // Use smart pointers for automatic memory management. Entities go into smart pointer vectors, areas go into smart pointer vectors, etc etc
 
     // Tileset texture for rendering map. Parsed from tilemap file.
-    SDL_Texture* tileset;
+    SDL_Texture* tileTex;
 
     // Map texture that contains all rendered layers of the tilemap for efficient rendering and avoidance of per-tile rendering each frame.
     SDL_Texture* mapTexture;
