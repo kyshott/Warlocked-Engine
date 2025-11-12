@@ -99,7 +99,7 @@ void Entity::renderSprite(SDL_Renderer* renderer) {
 
 void Entity::initTexture(SDL_Renderer* renderer) {
 
-	std::cout << "Rendering from path: " << path << std::endl;
+	//std::cout << "Rendering from path: " << path << std::endl;
 
 	texture = loadTexture(path, renderer);
 
