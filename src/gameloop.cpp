@@ -5,15 +5,15 @@
 #include "headers/controller.hpp"
 
 Game::Game() {
+	SCREEN_WIDTH = 1000;
+	SCREEN_HEIGHT = 1000;
 
+	initSDL();
 }
 
 //Initialize SDL and create a window and renderer
 void Game::initSDL() {
 	SDL_Init(SDL_INIT_EVERYTHING);
-
-	SCREEN_WIDTH = 1000;
-	SCREEN_HEIGHT = 1000;
 
 	mainScreen = SDL_CreateWindow("Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 	renderer = SDL_CreateRenderer(mainScreen, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC); // Use vsync. Implement toggle to turn this on/off.
@@ -27,8 +27,6 @@ void Game::close() {
 }
 
 void Game::gameloop() {
-
-	initSDL();
 
 	Player player(500, 500, 48, 48, renderer, "assets/Player/Warlock.PNG", true, 75.0f, DOWN);
 

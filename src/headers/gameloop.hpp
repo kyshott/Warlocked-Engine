@@ -28,14 +28,14 @@ public:
 	/**
 	* @brief Default constructor for the game class.
 	* 
-	* Initializes the game class. Currently does not do anything as all initialization is handled in initSDL() method.
+	* Initializes the game class, including all necessary SDL objects and class objects.
 	*/
 	Game();
 
 	/**
 	 * @brief Initializes all necessary SDL objects.
 	 * 
-	 * Initializes SDL by creating the renderer, window and window size. Calls SDL_Init() to spin everything up. 
+	 * DEPRECATED! Initializes SDL by creating the renderer, window and window size. Calls SDL_Init() to spin everything up. 
 	 */
 	void initSDL();
 

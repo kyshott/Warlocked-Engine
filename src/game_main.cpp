@@ -7,7 +7,7 @@
 int main() {
 
 	//Debug statement for checking working dir for assets
-	std::cout << "Current working directory: " << std::filesystem::current_path() << std::endl;
+	//std::cout << "Current working directory: " << std::filesystem::current_path() << std::endl;
 
 	Game game;
 

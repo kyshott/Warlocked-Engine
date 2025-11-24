@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 # NOTE: EVENTUALLY NEED INSTALL COMPONENTS FOR DEPLOYMENT!!!!
 
+# Target copy assets to build directory during make
 add_custom_target(copy_assets ALL
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         "${CMAKE_SOURCE_DIR}/assets"
