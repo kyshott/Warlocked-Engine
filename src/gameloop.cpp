@@ -4,6 +4,10 @@
 #include "headers/gamearea.hpp"
 #include "headers/controller.hpp"
 
+Game::Game() {
+
+}
+
 //Initialize SDL and create a window and renderer
 void Game::initSDL() {
 	SDL_Init(SDL_INIT_EVERYTHING);
@@ -26,20 +30,22 @@ void Game::gameloop() {
 
 	initSDL();
 
-	Player player(500, 500, 48, 48, renderer, "resources/Player/Warlock.PNG", true, 75.0f, DOWN);
+	Player player(500, 500, 48, 48, renderer, "assets/Player/Warlock.PNG", true, 75.0f, DOWN);
 
-	GameArea gameArea("resources/Maps/testmap.tmx", renderer, &player);
+	GameArea gameArea("assets/Maps/testmap.tmx", renderer, &player);
 
 	Controller controller(&player);
 
 	bool quit = false;
 
-	SDL_Event e;
-
 	Uint32 lastTick = SDL_GetTicks();
+
+	//Zero initialize the event structure
+	SDL_Event e{};
 
 	//While application is running - everything in this while loop is the "tick" or "loop"
 	while (controller.quit == false) {
+
 		Uint64 now = SDL_GetPerformanceCounter();
 		float deltaTime = (now - lastTick) / (float)SDL_GetPerformanceFrequency(); // Type cast to allow for per-device delta time
 		lastTick = now;
