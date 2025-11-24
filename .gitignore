@@ -3,3 +3,4 @@ CopilotIndices/
 .vs/
 out/
 build/
+CMakeSettings.json
