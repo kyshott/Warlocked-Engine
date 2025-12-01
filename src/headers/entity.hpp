@@ -5,17 +5,33 @@
 #include <string>
 #include <memory>
 #include <vector>
+#include <unordered_map>
 
-// Direction enumeration for entity movement and orientation.
-// Available values: NONE, UP, DOWN, LEFT, RIGHT.
+/**
+* @brief Spatial Hash structure for broad-phase collision detection.
+* 
+* The general data structure for spatial hashing, which divides the game area into a grid of cells to optimize collision detection.
+* Each cell contains a list of entities that occupy that cell, allowing for efficient retrieval of potential collision candidates.
+* 
+* This should realistically only be used for local detection, and not for large-scale detection across the entire area. Obviously, that would make this pointless
+* but I figured to include this side note to remind myself.
+*/
+struct SpatialHash {
+    int cellSize;
+
+    // Key = hashed (cellX, cellY), Value = list of entities in that cell
+    std::unordered_map<uint64_t, std::vector<Entity*>> table;
+
+    SpatialHash(int cellSize) : cellSize(cellSize) {}
+};
+
+/**
+ * @brief Enumeration for entity movement directions.
+ *
+ * Defines possible movement directions for entities, including NONE, UP, DOWN, LEFT, and RIGHT.
+ */
 enum Direction { NONE, UP, DOWN, LEFT, RIGHT };
 
-// Unused struct for potential future use with entity positioning.
-struct Position {
-    float x;
-    float y;
-    int layer; // For future use with multiple layers... don't know if this will ever be used, but may be useful for engine purposes and parallaxing if that ever becomes a thing
-};
 
 /**
  * @brief Base class for all colliding objects.
@@ -123,9 +139,6 @@ public:
      */
     void initTexture(SDL_Renderer* renderer);
 
-
-    bool collider(double dt, const std::vector<std::unique_ptr<Entity>>& others);
-
     /**
      * @brief Handles border collision and boundary correction.
      * 
@@ -137,6 +150,39 @@ public:
      * @param override If true, "disables" border collision. 
      */
     void borderCollision(int levelWidth, int levelHeight, bool override);
+
+    /**
+    * @brief Axis Aligned Bounding-Box Collision check. 
+    * 
+    * Checks for collision between two SDL_Rect objects using the traditional AABB method. Exists as the second or "narrow" phase
+    * of the entire collision detection process.
+    * 
+    * @param a First SDL_Rect object.
+	* @param b Second SDL_Rect object.
+    * 
+	* @return true/false depending on collision status. 
+    */
+    bool narrowPhase(const SDL_Rect& a, const SDL_Rect& b);
+
+    /**
+    * @brief Gathers potential collision candidates based on broad-phase detection.
+    * 
+    * Gathers a vector of entities that are potential candidates for collision based on the traditional broad-phase detection method.
+    * This method is technically optional for smaller areas/entity counts but is recommended for larger areas with many entities to optimize.
+	* Exists as the first or "broad" phase of the entire collision detection process.
+    * 
+	* @return Vector of entities that are collision candidates.
+    */
+    std::vector<Entity*> broadPhase();
+
+    /**
+    * @brief The ultimate collision resolution method.
+    * 
+    * Handles the resolution of collisions after checking against the entities within the candidate vector. Applies necessary positional corrections
+    * using the narrow-phase detection method. This is the method to call within any loop process (the update method). While this function can be called on its own,
+    * it is recommended to use this within a loop such that the entity is always checking.
+    */
+    void finalCollision();
 
 };
 

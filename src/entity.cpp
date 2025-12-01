@@ -2,6 +2,15 @@
 #include "headers/textureloader.hpp"
 #include <iostream>
 #include <filesystem>
+#include <vector>
+
+uint64_t hashKey(int x, int y) {
+    return (uint64_t)x << 32 | (uint32_t)y;
+}
+
+int toCellCoord(float pos) {
+    return (int)std::floor(pos / cellSize);
+}
 
 Entity::Entity(int x, int y, int w, int h, SDL_Renderer* renderer, std::string givenpath, bool animated, float spd, Direction _dir) {
 
@@ -48,6 +57,8 @@ void Entity::update(SDL_Renderer* renderer, float dt) {
             break;
         }
     }
+
+    // Call some sort of sprite loop function in each switch case before break... hopefully trivial?
     if(isAnimated) {
         switch (dir)
         {
@@ -72,12 +83,6 @@ void Entity::update(SDL_Renderer* renderer, float dt) {
     rect.y = static_cast<int>(posY);
 
     renderSprite(renderer);
-}
-
-bool Entity::collider(double dt, const std::vector<std::unique_ptr<Entity>>& others) {
-	// Find way to dereference unique pointer from vector so rect can be accessed
-
-	return true;
 }
 
 void Entity::borderCollision(int levelWidth, int levelHeight, bool override) {
@@ -106,4 +111,43 @@ void Entity::initTexture(SDL_Renderer* renderer) {
 	if (texture == NULL) {
 		std::cerr << "Texture failed to load. SDL_Error: " << SDL_GetError() << std::endl;
 	}
+}
+
+bool Entity::narrowPhase(const SDL_Rect& a, const SDL_Rect& b) {
+    return (
+        a.x < b.x + b.w &&
+        a.x + a.w > b.x &&
+        a.y < b.y + b.h &&
+        a.y + a.h > b.y
+        );
+}
+
+std::vector<Entity*> Entity::broadPhase() {
+	// Placeholder broad-phase collision detection
+	// In a real implementation, this would return a list of potential colliders based on spatial partitioning or other methods
+	return std::vector<Entity*>();
+}
+
+void Entity::finalCollision() {
+
+    std::vector<Entity*> candidates = broadPhase();
+
+    for (auto& collider : candidates) {
+        if (narrowPhase(rect, collider.rect)) {
+            // Moving right
+            if (dir == RIGHT) {
+                posX = collider.x - rect.w;
+            }
+            // Moving left
+            else if (dir == LEFT) {
+                posX = collider.x + collider.w;
+            }
+            else if (dir == UP) {
+				posY = collider.y + collider.h;
+            }
+            else if (dir == DOWN) {
+                posY = collider.y - rect.h;
+            }
+        }
+    }
 }
